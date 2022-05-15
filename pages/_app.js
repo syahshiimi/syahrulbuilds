@@ -4,7 +4,7 @@ import Layouts from "../components/layouts";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider colorModeManager="gray.700">
+    <ChakraProvider>
       <Layouts>
         <Component {...pageProps} />
       </Layouts>

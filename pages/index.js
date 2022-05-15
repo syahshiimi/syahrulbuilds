@@ -1,7 +1,7 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
-import Head from "next/head";
+import { Box, Button, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
 
 export default function Home() {
+    const { toggleColorMode } = useColorMode();
   return (
     <Flex
       className="c-homecontent"
@@ -50,6 +50,7 @@ export default function Home() {
           and proficiency in graphics and media related content.
         </Text>
       </Box>
+      <Button onClick={toggleColorMode}>Toggle Color</Button>
     </Flex>
   );
 }
