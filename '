@@ -1,9 +1,7 @@
 import { Box, Button, Container, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
 
 // Components
-import MainHeading from "../components/heading";
-import TechStack from "../components/techstack";
-
+import { MainHeading } from "../components/heading';
 
 
 
@@ -18,10 +16,8 @@ export default function Home() {
       direction="column"
     >
       <MainHeading/>
-      <Box
-      className="c-homecontent__box" as='section' mt='53px'>
             <Text
-        className="c-homecontent__text"
+        className="c-homecontent__content"
         size="md"
         as="strong"
         lineHeight="6"
@@ -31,8 +27,20 @@ export default function Home() {
         My former clients include Nanyang Technological University and National
         University of Singapore.
       </Text>
-      <TechStack/>
+      <Box className="c-homecontent__techstack" mt="94px">
+        <Heading size="md" lineHeight="6" color="purple.100" mb="21px">
+          My Tech Stack
+        </Heading>
+        <Text size="sm" lineHeight="5">
+          Apart from my tech stack, I have also acquired skills that were
+          related to arts and design such as the{" "}
+          <Text as="span" color="red.400">
+            Adobe Creative Cloud Suite
+          </Text>{" "}
+          and proficiency in graphics and media related content.
+        </Text>
       </Box>
+      <Button onClick={toggleColorMode}>Toggle Color</Button>
       </Box>
   );
 }

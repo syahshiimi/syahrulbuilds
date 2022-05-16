@@ -1,12 +1,12 @@
+import { Container, Box } from "@chakra-ui/react";
 import Footer from "./footer";
 import Header from "./header";
 
 export default function Layout({ children }) {
   return (
-    <>
+      <Container>
       <Header />
-      <main>{children}</main>
-      <Footer />
-    </>
+      <Box>{children}</Box>
+      </Container>
   );
 }
