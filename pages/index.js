@@ -5,17 +5,12 @@ import MainHeading from "../components/heading";
 import TechStack from "../components/techstack";
 
 
-
-
 export default function Home() {
     const { toggleColorMode } = useColorMode();
   return (
-      <Box
+      <Container
       className="c-homecontent"
       as="section"
-      grow="1"
-      align="start"
-      direction="column"
     >
       <MainHeading/>
       <Box
@@ -33,6 +28,6 @@ export default function Home() {
       </Text>
       <TechStack/>
       </Box>
-      </Box>
+      </Container>
   );
 }
