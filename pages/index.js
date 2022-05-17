@@ -20,6 +20,7 @@ export default function Home() {
         size="md"
         as="strong"
         lineHeight="6"
+      color={"gray.50"}
       >
         I am currently 26 years old, working as a freelance web developer.
         {"\n"}

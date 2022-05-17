@@ -1,4 +1,4 @@
-import { Heading, Text} from '@chakra-ui/react';
+import { Container, Heading, Text} from '@chakra-ui/react';
 
 export default function MainHeading() {
     return (
@@ -8,6 +8,7 @@ export default function MainHeading() {
         size="md"
         align="left"
         mt='60px'
+        color={"gray.50"}
       >
         Hi!, I’m Syahrul. I’m a{" "}
         <Text as="span" color="blue.500">

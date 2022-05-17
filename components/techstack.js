@@ -2,7 +2,7 @@ import { Box, Heading, Text } from '@chakra-ui/react';
 
 export default function TechStack() {
     return (
-      <Box className="c-homecontent__techstack" mt="94px">
+      <Box className="c-homecontent__techstack" mt="94px" color={'gray.50'}>
         <Heading size="md" lineHeight="6" color="purple.100" mb="21px">
           My Tech Stack
         </Heading>
