@@ -4,10 +4,10 @@ import Header from "./header";
 
 export default function Layout({ children }) {
   return (
-      <Box w='100vw' h={'100vh'} padding={'1vh'} bg='gray.700' display={'flex'} flexDirection={"column"} >
+      <Flex bg='gray.700' minH={'100vh'} direction='column' className="c-layoutcontainer" pb={'2vh'}>
       <Header />
-      <Flex grow={1}>{children}</Flex>
+      <Flex grow={1} className='c-children' pb={'2vh'}>{children}</Flex>
       <Footer/>
-      </Box>
+      </Flex>
   );
 }

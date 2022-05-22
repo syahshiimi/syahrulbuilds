@@ -20,3 +20,16 @@ export const FrameworksLang =  {
     frameworkNine: 'Python Turtle',
     frameworkTen: 'React Router'
 }
+
+export const KnownApps = {
+    appOne: 'Git',
+    apptwo: 'Pip',
+    appThree: 'Anaconda',
+    appFour: 'Vim/Nvim',
+    appFive: 'Unix',
+    appSix: 'Notion',
+    appSeven: 'Figma',
+    appEight: 'Jupyter Notebooks',
+    appNine: 'Contentful CMS',
+    appTen: 'Strapi',
+}
