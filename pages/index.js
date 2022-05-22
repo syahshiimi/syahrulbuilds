@@ -6,7 +6,6 @@ import TechStack from "../components/techstack";
 
 
 export default function Home() {
-    const { toggleColorMode } = useColorMode();
   return (
       <Container
       className="c-homecontent"
