@@ -1,7 +1,6 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
-
-
 import Languages from "../components/languages";
+import Frameworks from "../components/frameworks";
 export default function TechStack() {
     return (
       <Box className="c-homecontent__techstack" mt="94px" color={'gray.50'}>
@@ -18,6 +17,7 @@ export default function TechStack() {
         </Text>
         <Box className='c-homecontent__languages'>
         <Languages/>
+        <Frameworks/>
         </Box>
       </Box>
 

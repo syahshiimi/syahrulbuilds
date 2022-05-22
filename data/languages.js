@@ -8,7 +8,7 @@ export const ProgrammingLang = {
     languageseven: 'Markdown'
 }
 
-export const Frameworks =  {
+export const FrameworksLang =  {
     frameworkOne: 'React',
     frameworkTwo: 'Gatsby',
     frameworkThree: 'Tensorflow',
