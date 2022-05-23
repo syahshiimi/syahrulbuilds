@@ -3,10 +3,8 @@ import { Box, Button, Container, Flex, Heading, Text, useColorMode } from "@chak
 // Components
 import MainHeading from "../components/heading";
 import TechStack from "../components/techstacks/techstack";
-import PastWorkCards from "../components/pastworkcards";
+import PastWorksContent from "../components/pastworks";
 
-// Import Data
-import { PastWorks } from "../data/pastworks";
 
 
 
@@ -33,20 +31,10 @@ export default function Home() {
                     My former clients include Nanyang Technological University and National
                     University of Singapore.
                 </Text>
+                {/* Techstack section */}
                 <TechStack />
-                {Object.entries(PastWorks).map(([key, value]) => {
-                    // Destructure returned objects
-                    const { title, imgsrc, techstack, WorkInfo } = value
-                    return (
-                        <PastWorkCards
-                            key={key}
-                            title={title}
-                            imgsrc={imgsrc}
-                            techstack={techstack}
-                            text={WorkInfo} />
-                    )
-                })
-                }
+                {/* Pastworks section */}
+                <PastWorksContent />
             </Box>
         </Container>
     );
