@@ -1,4 +1,4 @@
-import { Box, Container, Tag, Text, Wrap } from "@chakra-ui/react";
+import { Icon, Box, Tag, TagLeftIcon, Text, Wrap, TagLabel } from "@chakra-ui/react";
 import { ProgrammingLang } from "../data/languages";
 
 
@@ -9,7 +9,16 @@ export default function Languages() {
             <Wrap className="c-languages_languages" mt={'11px'}>
                 {Object.entries(ProgrammingLang).map(([key, value]) => {
                     return (
-                        <Tag colorScheme={'purple'} size='sm' variant={'solid'} key={key}>{value}</Tag>
+                        <Tag
+                            colorScheme={'purple'}
+                            size='sm'
+                            variant={'solid'}
+                            key={key}>
+                            <TagLabel>
+                                {value}
+                            </TagLabel>
+                            <TagLeftIcon boxSize={'12px'} />
+                        </Tag>
                     )
                 })}
             </Wrap>

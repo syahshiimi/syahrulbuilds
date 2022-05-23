@@ -7,10 +7,15 @@ export default function Apps() {
         <Box mt={'50px'}>
             <Text as={'strong'} fontSize='md' lineHeight={'6'}>Apps</Text>
             <Wrap className="c-languages_languages" mt={'11px'}>
-
                 {Object.entries(KnownApps).map(([key, value]) => {
                     return (
-                        <Tag colorScheme='pink' size='sm' variant={'solid'} key={key}>{value}</Tag>
+                        <Tag
+                            colorScheme='pink'
+                            size='sm'
+                            variant={'solid'}
+                            key={key}>
+                            {value}
+                        </Tag>
                     )
                 })}
             </Wrap>
