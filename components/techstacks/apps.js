@@ -1,5 +1,5 @@
 import { Box, Container, Tag, Text, Wrap } from "@chakra-ui/react";
-import { KnownApps } from "../data/languages";
+import { KnownApps } from "../../data/languages";
 
 
 export default function Apps() {
