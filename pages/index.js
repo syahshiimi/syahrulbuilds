@@ -39,6 +39,7 @@ export default function Home() {
                     const { title, imgsrc, techstack, WorkInfo } = value
                     return (
                         <PastWorkCards
+                            key={key}
                             title={title}
                             imgsrc={imgsrc}
                             techstack={techstack}

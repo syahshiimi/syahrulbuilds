@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function PastWorkCards({ title, techstack, text, imgsrc }) {
 
     return (
-        <Flex className="c-builtcards" direction={'column'} mt='37px'>
+        <Flex className="c-builtcards" direction={'column'} mt='37px' >
             <Text
                 fontSize={'md'}
                 align={'right'}
