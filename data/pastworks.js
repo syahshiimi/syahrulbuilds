@@ -11,5 +11,11 @@ export const PastWorks = {
         imgsrc: '/adm_card_image.png',
         techstack: ['Sitefinity CMS', 'CSS'],
         WorkInfo: 'Utilising the same CMS and drag-n-drop component system, I built a website frontend that focused on a more cleaner and organised layout. As the school was a lot larger than NTU ADM, there were also necessary backend content management.',
+    },
+    Thirdwork: {
+        title: 'Reconceptualizing the Cold War Asia',
+        imgsrc: '/adm_card_image.png',
+        techstack: ['Contentful CMS', 'CSS', 'React', 'Gatsby', 'd3.js', 'Gatsby Cloud'],
+        WorkInfo: 'This is my first full stack project, working with a Tier 1 MOE grant project (6 digits) for creating a digital archive regarding cold war narratives within Asia. The project archives over 100 interviews surrounding the cold war in Asia.The project is a long- term research project by Prof.Masuda Hajimu, a historian at NUS focusing on the Cold War in Asia.',
     }
 }

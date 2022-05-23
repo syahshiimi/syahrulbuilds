@@ -3,7 +3,7 @@ import { Box, Button, Container, Flex, Heading, Text, useColorMode } from "@chak
 // Components
 import MainHeading from "../components/heading";
 import TechStack from "../components/techstacks/techstack";
-import PastWorkCards from "../components/builtcards";
+import PastWorkCards from "../components/pastworkcards";
 
 // Import Data
 import { PastWorks } from "../data/pastworks";
