@@ -3,16 +3,17 @@ import { Box, Button, Container, Flex, Heading, Text, useColorMode } from "@chak
 // Components
 import MainHeading from "../components/heading";
 import TechStack from "../components/techstack";
+import Cards from "../components/builtcards";
 
 
 export default function Home() {
   return (
-      <Container
+    <Container
       className="c-homecontent"
       as="section"
     >
-      <MainHeading/>
-      <Box
+    <MainHeading/>
+    <Box
       className="c-homecontent__box" as='section' mt='53px'>
             <Text
         className="c-homecontent__text"
@@ -25,9 +26,10 @@ export default function Home() {
         {"\n"}
         My former clients include Nanyang Technological University and National
         University of Singapore.
-      </Text>
+       </Text>
       <TechStack/>
+      <Cards title={'NTU Art, Design and Media'}/>
       </Box>
-      </Container>
+    </Container>
   );
 }

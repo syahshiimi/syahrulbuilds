@@ -4,7 +4,7 @@ import Header from "./header";
 
 export default function Layout({ children }) {
   return (
-      <Flex bg='gray.700' minH={'100vh'} direction='column' className="c-layoutcontainer" pb={'2vh'}>
+      <Flex bg='gray.700' minH={'100vh'} direction='column' className="c-layoutcontainer" p={'1vw 2vh'}>
       <Header />
       <Flex grow={1} className='c-children' pb={'2vh'}>{children}</Flex>
       <Footer/>
