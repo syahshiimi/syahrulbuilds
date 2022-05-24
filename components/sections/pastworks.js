@@ -15,13 +15,13 @@ export default function PastWorksContent() {
                     color='orange.100'
                     mb='21px'
                     className="c-pastworks__textheading">
-                    What I've Built
+                    What I&apos;ve Built
                 </Heading>
                 <Text className="c-pastworks__content"
                     fontSize={'sm'}
                     color='gray.50'
                 >
-                    I’ve spent time working with institutions working on grant projects. I enjoy working on research projects especially in the humanities as they are often impactful in nature.
+                    I&apos;ve spent time working with institutions working on grant projects. I enjoy working on research projects especially in the humanities as they are often impactful in nature.
                 </Text>
             </Box>
             <Flex className="c-pastworks_cardcontainer" direction={'column'}>
