@@ -5,6 +5,7 @@ import MainHeading from "../components/heading";
 import TechStack from "../components/techstacks/techstack";
 import PastWorksContent from "../components/pastworks";
 import Introduction from "../components/introduction";
+import WorkWithMe from "../components/workwithme";
 
 
 
@@ -19,6 +20,8 @@ export default function Home() {
             <TechStack />
             {/* Pastworks section */}
             <PastWorksContent />
+            {/* Work With Me section */}
+            <WorkWithMe/>
         </Container>
     );
 }

@@ -3,9 +3,9 @@ import { Box, Text } from '@chakra-ui/react';
 export default function Introduction() {
     return (
         <Box
-            className="c-homecontent__box"
+            className="c-homecontent__introduction"
             as='section'
-            mt='53px'>
+            mt='25px'>
             <Text
                 className="c-homecontent__text"
                 size="md"

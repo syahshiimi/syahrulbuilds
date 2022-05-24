@@ -8,7 +8,7 @@ import { PastWorks } from "../data/pastworks";
 
 export default function PastWorksContent() {
     return (
-        <Box>
+        <Box className="c-homecontent__pastworks">
             <Box className="c-pastworks__textcontainer" mt={94}>
                 <Heading
                     size={'md'}
