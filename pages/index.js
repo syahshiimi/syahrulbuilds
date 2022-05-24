@@ -1,11 +1,11 @@
 import { Box, Button, Container, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
 
-// Components
-import MainHeading from "../components/heading";
+// Page Sections 
+import MainHeading from "../components/sections/heading";
 import TechStack from "../components/techstacks/techstack";
-import PastWorksContent from "../components/pastworks";
-import Introduction from "../components/introduction";
-import WorkWithMe from "../components/workwithme";
+import PastWorksContent from "../components/sections/pastworks";
+import Introduction from "../components/sections/introduction";
+import WorkWithMe from "../components/sections/workwithme";
 
 
 
@@ -21,7 +21,7 @@ export default function Home() {
             {/* Pastworks section */}
             <PastWorksContent />
             {/* Work With Me section */}
-            <WorkWithMe/>
+            <WorkWithMe />
         </Container>
     );
 }

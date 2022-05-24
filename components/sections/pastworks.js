@@ -1,10 +1,10 @@
 import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 
 // Components
-import PastWorkCards from "../components/pastworkcards";
+import PastWorkCards from "../../components/pastworkcards";
 
 // Import Data
-import { PastWorks } from "../data/pastworks";
+import { PastWorks } from "../../data/pastworks";
 
 export default function PastWorksContent() {
     return (
