@@ -6,7 +6,7 @@ import Image from 'next/image';
 const LanguagesTag = ({ object }) => {
     const { languages = [] } = object;
     return (
-        <Wrap>
+        <>
             {(languages) ? languages.map((item, index) => {
                 return (
                     <Tag
@@ -22,14 +22,14 @@ const LanguagesTag = ({ object }) => {
                 )
             }) : null
             }
-        </Wrap>
+        </>
     )
 }
 
 const FrameworksTag = ({ object }) => {
     const { frameworks = [] } = object;
     return (
-        <Wrap>
+        <>
             {(frameworks) ? frameworks.map((item, index) => {
                 return (
                     <Tag
@@ -37,7 +37,7 @@ const FrameworksTag = ({ object }) => {
                         className="c-frameworks_tag"
                         size={'sm'}
                         variant={'solid'}
-                        colorScheme='teal'>
+                        colorScheme='blue'>
                         <TagLabel>
                             {item}
                         </TagLabel>
@@ -45,14 +45,14 @@ const FrameworksTag = ({ object }) => {
                 )
             }) : null
             }
-        </Wrap>
+        </>
     )
 }
 
 const AppsTag = ({ object }) => {
     const { apps = [] } = object;
     return (
-        <Wrap>
+        <>
             {(apps) ? apps.map((item, index) => {
                 return (
                     <Tag
@@ -68,7 +68,7 @@ const AppsTag = ({ object }) => {
                 )
             }) : null
             }
-        </Wrap>
+        </>
     )
 }
 export default function PastWorkCards({ title, techstack, text, imgsrc }) {
@@ -92,7 +92,12 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
 
                 />
             </Container>
-            <Text fontSize='sm' align={'right'} as='strong' color='gray.300' className={'c-builtcards__title'}>
+            <Text
+                fontSize='sm'
+                align={'right'}
+                as='strong'
+                color='gray.300'
+                className={'c-builtcards__title'}>
                 Tech Stack
             </Text>
             <Wrap className="c-builtcards__container" justify={'right'} mt='1vh'>
