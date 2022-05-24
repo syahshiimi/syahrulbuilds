@@ -1,7 +1,76 @@
-import { Container, Wrap, Heading, Text, Flex, Tag } from "@chakra-ui/react";
+import { Container, Wrap, Heading, Text, Flex, Tag, TagLabel } from "@chakra-ui/react";
 import Image from 'next/image';
 
 
+// Create function for languages tags
+const LanguagesTag = ({ object }) => {
+    const { languages = [] } = object;
+    return (
+        <Wrap>
+            {(languages) ? languages.map((item, index) => {
+                return (
+                    <Tag
+                        key={index}
+                        className="c-languages__tag"
+                        size={'sm'}
+                        variant={'solid'}
+                        colorScheme='purple'>
+                        <TagLabel>
+                            {item}
+                        </TagLabel>
+                    </Tag>
+                )
+            }) : null
+            }
+        </Wrap>
+    )
+}
+
+const FrameworksTag = ({ object }) => {
+    const { frameworks = [] } = object;
+    return (
+        <Wrap>
+            {(frameworks) ? frameworks.map((item, index) => {
+                return (
+                    <Tag
+                        key={index}
+                        className="c-frameworks_tag"
+                        size={'sm'}
+                        variant={'solid'}
+                        colorScheme='teal'>
+                        <TagLabel>
+                            {item}
+                        </TagLabel>
+                    </Tag>
+                )
+            }) : null
+            }
+        </Wrap>
+    )
+}
+
+const AppsTag = ({ object }) => {
+    const { apps = [] } = object;
+    return (
+        <Wrap>
+            {(apps) ? apps.map((item, index) => {
+                return (
+                    <Tag
+                        key={index}
+                        className="c-apps_tag"
+                        size={'sm'}
+                        variant={'solid'}
+                        colorScheme='pink'>
+                        <TagLabel>
+                            {item}
+                        </TagLabel>
+                    </Tag>
+                )
+            }) : null
+            }
+        </Wrap>
+    )
+}
 export default function PastWorkCards({ title, techstack, text, imgsrc }) {
 
     return (
@@ -27,14 +96,9 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                 Tech Stack
             </Text>
             <Wrap className="c-builtcards__container" justify={'right'} mt='1vh'>
-                {Object.entries(techstack).map(([key, value]) => {
-                    return (
-                        <Tag
-                            className="c-builtcards__tags"
-                            key={key}
-                            colorScheme='teal'>{value}</Tag>
-                    )
-                })}
+                <LanguagesTag object={techstack} />
+                <FrameworksTag object={techstack} />
+                <AppsTag object={techstack} />
             </Wrap>
             <Container className="c-builtcards__shorttext" mt={'30px'}>
                 <Text fontSize="sm" color={'gray.50'}>
