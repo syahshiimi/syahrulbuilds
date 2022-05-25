@@ -15,10 +15,8 @@ export default function Introduction() {
                 fontWeight='semibold'
             >
                 I am currently 26 years old, working as a freelance web developer.
-                <Text mt={2}>
-                    My former clients include Nanyang Technological University and National
-                    University of Singapore.
-                </Text>
+                My former clients include Nanyang Technological University and National
+                University of Singapore.
             </Text>
 
             )

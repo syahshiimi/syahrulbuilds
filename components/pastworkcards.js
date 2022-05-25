@@ -77,13 +77,14 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
         <Flex className="c-builtcards" direction={'column'} mt='37px' >
             <Text
                 fontSize={'md'}
+                lineHeight={6}
                 align={'right'}
                 color='gray.100'
                 as={'strong'}
                 className="c-builtcards__heading">
                 {title}
             </Text>
-            <Container className="c-builtcards__image" mt='30px'>
+            <Container className="c-builtcards__image" mt={6}>
                 <Image
                     src={imgsrc}
                     alt='card image'
@@ -92,20 +93,22 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
 
                 />
             </Container>
-            <Text
-                fontSize='sm'
-                align={'right'}
-                as='strong'
-                color='gray.300'
-                className={'c-builtcards__title'}>
-                Tech Stack
-            </Text>
-            <Wrap className="c-builtcards__container" justify={'right'} mt='1vh'>
-                <LanguagesTag object={techstack} />
-                <FrameworksTag object={techstack} />
-                <AppsTag object={techstack} />
-            </Wrap>
-            <Container className="c-builtcards__shorttext" mt={'30px'}>
+            <Container display={'flex'} alignItems='right' flexDir={'column'} className='c-techstack__container'>
+                <Text
+                    fontSize='sm'
+                    align={'right'}
+                    as='strong'
+                    color='gray.300'
+                    className={'c-builtcards__title'}>
+                    Tech Stack
+                </Text>
+                <Wrap className="c-builtcards__tagscontainer" justify={'right'} mt={2}>
+                    <LanguagesTag object={techstack} />
+                    <FrameworksTag object={techstack} />
+                    <AppsTag object={techstack} />
+                </Wrap>
+            </Container>
+            <Container className="c-builtcards__shorttext" mt={9}>
                 <Text fontSize="sm" color={'gray.50'}>
                     {text}
                 </Text>

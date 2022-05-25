@@ -2,13 +2,10 @@ import { Box, Button, Container, Flex, Heading, Stack, Text, useColorMode } from
 
 // Page Sections 
 import MainHeading from "../components/sections/heading";
-import TechStack from "../components/techstacks/techstack";
+import TechStack from "../components/sections/techstack";
 import PastWorksContent from "../components/sections/pastworks";
 import Introduction from "../components/sections/introduction";
 import WorkWithMe from "../components/sections/workwithme";
-
-
-
 
 export default function Home() {
     return (

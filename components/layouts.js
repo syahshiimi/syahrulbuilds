@@ -1,13 +1,13 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Container, Flex } from "@chakra-ui/react";
 import Footer from "./footer";
 import Header from "./header";
 
 export default function Layout({ children }) {
     return (
-        <Flex bg='gray.700' minH={'100vh'} direction='column' className="c-layoutcontainer" maxW={'container.sm'}>
+        <Container bg='gray.700' minH={'100vh'} className="c-layoutcontainer" maxW={'container.sm'}>
             <Header />
             <Flex grow={1} className='c-children' pb={'2vh'}>{children}</Flex>
             <Footer />
-        </Flex>
+        </Container>
     );
 }
