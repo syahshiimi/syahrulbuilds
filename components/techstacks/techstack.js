@@ -29,7 +29,7 @@ export default function Techstack() {
             <Stack
                 className='c-homecontent__languages'
                 spacing={'18px'}
-                direction={['column', 'row']}>
+                direction={['column', 'column', 'row', 'row']}>
                 <Languages />
                 <Frameworks />
                 <Apps />
