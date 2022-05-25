@@ -1,12 +1,15 @@
-import { Box, Container, Text, Link } from "@chakra-ui/react";
+import { Box, Container, Text, Link, Heading } from "@chakra-ui/react";
+import Head from "next/head";
 import NextLink from 'next/link'; // aliased from link to NextLink
 
 export default function Header() {
     return (
-        <Container className="c-title">
+        <Container className="c-title" pt={10} pb>
             <NextLink href="/" passHref>
                 <Link >
-                    Syahrul{"\n "} Anuar
+                    <Heading color={'gray.50'} size='md' >
+                        Syahrul{"\n "} Anuar
+                    </Heading>
                 </Link>
             </NextLink>
         </Container>

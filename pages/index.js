@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Stack, Text, useColorMode } from "@chakra-ui/react";
 
 // Page Sections 
 import MainHeading from "../components/sections/heading";
@@ -13,9 +13,11 @@ import WorkWithMe from "../components/sections/workwithme";
 export default function Home() {
     return (
         <Container className="c-homecontent" as="section">
-            <MainHeading />
-            {/* Introduction section */}
-            <Introduction />
+            <Stack direction={"column"} spacing={12}>
+                <MainHeading />
+                {/* Introduction section */}
+                <Introduction />
+            </Stack>
             {/* Techstack section */}
             <TechStack />
             {/* Pastworks section */}
