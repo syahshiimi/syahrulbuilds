@@ -4,7 +4,7 @@ import { KnownApps } from "../../data/languages";
 
 export default function Apps() {
     return (
-        <Box mt={'50px'}>
+        <Box className="c-apps__container">
             <Text as={'strong'} fontSize='md' lineHeight={'6'}>Apps</Text>
             <Wrap className="c-languages_languages" mt={'11px'}>
                 {Object.entries(KnownApps).map(([key, value]) => {

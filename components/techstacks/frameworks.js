@@ -4,7 +4,7 @@ import { FrameworksLang } from "../../data/languages";
 
 export default function Frameworks() {
     return (
-        <Box mt={'50px'}>
+        <Box frameworks='c-frameworks__container'>
             <Text as={'strong'} fontSize='md' lineHeight={'6'}>Franeworks</Text>
             <Wrap className="c-languages_languages" mt={'11px'}>
                 {Object.entries(FrameworksLang).map(([key, value]) => {
