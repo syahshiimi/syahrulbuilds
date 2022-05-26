@@ -74,38 +74,41 @@ const AppsTag = ({ object }) => {
 export default function PastWorkCards({ title, techstack, text, imgsrc }) {
 
     return (
-        <Flex className="c-pastworks" direction={'column'} mt={8} >
+        <Flex className="c-builtcards" direction={'column'} mt='37px' >
             <Text
                 fontSize={'md'}
                 lineHeight={6}
                 align={'right'}
                 color='gray.100'
                 as={'strong'}
-                className="c-pastworks__heading">
+                className="c-builtcards__heading">
                 {title}
             </Text>
-            <Container className="c-pastworks__image" mt={6}>
+            <Container className="c-builtcards__image" mt={6}>
                 <Image
                     src={imgsrc}
                     alt='card image'
                     width={778}
                     height={477}
+
                 />
             </Container>
-            <Text
-                fontSize='sm'
-                align={'right'}
-                as='strong'
-                color='gray.300'
-                className={'c-pastworks__title'}>
-                Tech Stack
-            </Text>
-            <Wrap className="c-pastworks__tagscontainer" justify={'right'} mt={3}>
-                <LanguagesTag object={techstack} />
-                <FrameworksTag object={techstack} />
-                <AppsTag object={techstack} />
-            </Wrap>
-            <Container className="c-pastworks__shorttext" mt={8}>
+            <Container display={'flex'} alignItems='right' flexDir={'column'} className='c-techstack__container' >
+                <Text
+                    fontSize='sm'
+                    align={'right'}
+                    as='strong'
+                    color='gray.300'
+                    className={'c-builtcards__title'}>
+                    Tech Stack
+                </Text>
+                <Wrap className="c-builtcards__tagscontainer" justify={'right'} mt={3}>
+                    <LanguagesTag object={techstack} />
+                    <FrameworksTag object={techstack} />
+                    <AppsTag object={techstack} />
+                </Wrap>
+            </Container>
+            <Container className="c-builtcards__shorttext" mt={8}>
                 <Text fontSize="sm" color={'gray.50'}>
                     {text}
                 </Text>

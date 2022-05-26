@@ -71,25 +71,26 @@ const AppsTag = ({ object }) => {
         </>
     )
 }
-export default function PastWorkCards({ title, techstack, text, imgsrc }) {
+export default function CurrentWorkCards({ title, techstack, text, imgsrc }) {
 
     return (
-        <Flex className="c-pastworks" direction={'column'} mt={8} >
+        <Flex className="c-currentworks" direction={'column'} mt={8} >
             <Text
                 fontSize={'md'}
                 lineHeight={6}
                 align={'right'}
                 color='gray.100'
                 as={'strong'}
-                className="c-pastworks__heading">
+                className="c-currentworks__heading">
                 {title}
             </Text>
-            <Container className="c-pastworks__image" mt={6}>
+            <Container className="c-currentworks__image" mt={6}>
                 <Image
                     src={imgsrc}
                     alt='card image'
                     width={778}
                     height={477}
+
                 />
             </Container>
             <Text
@@ -97,16 +98,16 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                 align={'right'}
                 as='strong'
                 color='gray.300'
-                className={'c-pastworks__title'}>
+                className={'c-currentworks__title'}>
                 Tech Stack
             </Text>
-            <Wrap className="c-pastworks__tagscontainer" justify={'right'} mt={3}>
+            <Wrap className="c-currentworks__tagscontainer" justify={'right'} mt={3}>
                 <LanguagesTag object={techstack} />
                 <FrameworksTag object={techstack} />
                 <AppsTag object={techstack} />
             </Wrap>
-            <Container className="c-pastworks__shorttext" mt={8}>
-                <Text fontSize="sm" color={'gray.50'}>
+            <Container className="c-currentworks__shorttext" mt={8}>
+                <Text fontSize="sm" color={'gray.50'} align={'right'}>
                     {text}
                 </Text>
             </Container>
