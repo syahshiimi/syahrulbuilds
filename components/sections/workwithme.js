@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Link, Flex, Heading, Text } from "@chakra-ui/react";
 
 
 export default function WorkWithMe() {
@@ -8,12 +8,12 @@ export default function WorkWithMe() {
             justify='center'
             align={'center'}
             className="c-homecontent__workwithme"
-            mt={'94px'}
-            mb={'94px'}>
+            my={24}>
             <Heading
                 className="c-workwithme__texttitle"
                 size={'md'}
                 color={'teal.100'}
+                mb={5}
             >
                 Work With Me
             </Heading>
@@ -22,12 +22,11 @@ export default function WorkWithMe() {
                 color={'gray.50'}
                 fontSize={'sm'}
                 as='strong'
-                mt={'25px'}
                 textAlign='center'>
                 I am also open to working on art collaborations that may include anything related web technologies, digital experiences and interfaces.
             </Text>
             <Text className="c-workwithme__email" fontSize={'lg'} color='gray.300' as={'strong'} mt='50px'>
-                <a href="mailto:syahrlanuar95@gmail.com">Drop me an email!</a>
+                <Link href="mailto:syahrlanuar95@gmail.com">Drop me an email!</Link>
             </Text>
         </Flex>
     )

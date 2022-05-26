@@ -81,6 +81,7 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                 align={'right'}
                 color='gray.100'
                 as={'strong'}
+                pl={24}
                 className="c-pastworks__heading">
                 {title}
             </Text>

@@ -13,7 +13,7 @@ export default function Techstack() {
         <Box
             className="c-homecontent__techstack"
             mt={28} color={'gray.50'}>
-            <Heading size="md" lineHeight="6" color="purple.100" mb="21px" textAlign={'center'}>
+            <Heading size="md" lineHeight="6" color="purple.100" mb={5} textAlign={'center'}>
                 My Tech Stack
             </Heading>
             <Text fontSize="sm" lineHeight="5" mb={16} fontWeight='medium'>

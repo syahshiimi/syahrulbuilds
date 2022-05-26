@@ -13,7 +13,7 @@ export default function CurrentWorksContent() {
                 <Heading
                     size={'md'}
                     color='pink.100'
-                    mb='21px'
+                    mb={5}
                     textAlign={'center'}
                     className="c-currentworks__textheading">
                     What I&apos;m Building

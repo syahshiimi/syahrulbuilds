@@ -13,7 +13,7 @@ export default function PastWorksContent() {
                 <Heading
                     size={'md'}
                     color='orange.100'
-                    mb='21px'
+                    mb={5}
                     textAlign={'center'}
                     className="c-pastworks__textheading">
                     What I&apos;ve Built
