@@ -22,7 +22,8 @@ export default function WorkWithMe() {
                 color={'gray.50'}
                 fontSize={'sm'}
                 as='strong'
-                mt={'25px'}>
+                mt={'25px'}
+                textAlign='center'>
                 I am also open to working on art collaborations that may include anything related web technologies, digital experiences and interfaces.
             </Text>
             <Text className="c-workwithme__email" fontSize={'lg'} color='gray.300' as={'strong'} mt='50px'>

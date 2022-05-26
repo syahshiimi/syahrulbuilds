@@ -14,17 +14,16 @@ export default function PastWorksContent() {
                     size={'md'}
                     color='orange.100'
                     mb='21px'
+                    textAlign={'center'}
                     className="c-pastworks__textheading">
                     What I&apos;ve Built
                 </Heading>
-                <Container>
-                    <Text className="c-pastworks__content"
-                        fontSize={'sm'}
-                        color='gray.50'
-                    >
-                        I&apos;ve spent time working with institutions working on grant projects. I enjoy working on research projects especially in the humanities as they are often impactful in nature.
-                    </Text>
-                </Container>
+                <Text className="c-pastworks__content"
+                    fontSize={'sm'}
+                    color='gray.50'
+                >
+                    I&apos;ve spent time working with institutions working on grant projects. I enjoy working on research projects especially in the humanities as they are often impactful in nature.
+                </Text>
             </Box>
             <Flex className="c-pastworks_cardcontainer" direction={'column'}>
                 {Object.entries(PastWorks).map(([key, value]) => {

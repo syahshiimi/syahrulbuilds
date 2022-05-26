@@ -8,7 +8,6 @@ export default function MainHeading() {
             size="md"
             align="left"
             color={"gray.50"}
-            pt={12}
         >
             Hi!, I’m Syahrul. I’m a{" "}
             <Text as="span" color="blue.500">

@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Container, Text } from '@chakra-ui/react';
 
 export default function Introduction() {
     return (
@@ -18,7 +18,6 @@ export default function Introduction() {
                 My former clients include Nanyang Technological University and National
                 University of Singapore.
             </Text>
-
             )
         </Box>
     )
