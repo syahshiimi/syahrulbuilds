@@ -78,7 +78,7 @@ export default function CurrentWorkCards({ title, techstack, text, imgsrc }) {
             <Text
                 fontSize={'md'}
                 lineHeight={6}
-                align={'right'}
+                align={'left'}
                 color='gray.100'
                 as={'strong'}
                 className="c-currentworks__heading">
@@ -95,13 +95,13 @@ export default function CurrentWorkCards({ title, techstack, text, imgsrc }) {
             </Container>
             <Text
                 fontSize='sm'
-                align={'right'}
+                align={'left'}
                 as='strong'
                 color='gray.300'
                 className={'c-currentworks__title'}>
                 Tech Stack
             </Text>
-            <Wrap className="c-currentworks__tagscontainer" justify={'right'} mt={3}>
+            <Wrap className="c-currentworks__tagscontainer" justify={'left'} mt={3}>
                 <LanguagesTag object={techstack} />
                 <FrameworksTag object={techstack} />
                 <AppsTag object={techstack} />
