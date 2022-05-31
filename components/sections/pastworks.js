@@ -8,8 +8,8 @@ import { PastWorks } from "../../data/pastworks";
 
 export default function PastWorksContent() {
     return (
-        <Box className="c-homecontent__pastworks" px={[5, 9, 16, 20]} mx={[5, 9, 16, 20]}>
-            <Box className="c-pastworks__textcontainer" mt={94}>
+        <Container className="c-homecontent__pastworks" maxW={['container.sm', 'container.md']} px={[0, 4]}>
+            < Box className="c-pastworks__textcontainer" mt={94} >
                 <Heading
                     size={'md'}
                     color='orange.100'
@@ -24,7 +24,7 @@ export default function PastWorksContent() {
                 >
                     I&apos;ve spent time working with institutions working on grant projects. I enjoy working on research projects especially in the humanities as they are often impactful in nature.
                 </Text>
-            </Box>
+            </Box >
             <Flex className="c-pastworks_cardcontainer" direction={'column'}>
                 {Object.entries(PastWorks).map(([key, value]) => {
                     // Destructure returned objects
@@ -41,7 +41,7 @@ export default function PastWorksContent() {
                 }
             </Flex>
 
-        </Box>
+        </Container >
 
     )
 
