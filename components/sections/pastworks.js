@@ -8,7 +8,7 @@ import { PastWorks } from "../../data/pastworks";
 
 export default function PastWorksContent() {
     return (
-        <Box className="c-homecontent__pastworks">
+        <Box className="c-homecontent__pastworks" px={[5, 9, 16, 20]} mx={[5, 9, 16, 20]}>
             <Box className="c-pastworks__textcontainer" mt={94}>
                 <Heading
                     size={'md'}

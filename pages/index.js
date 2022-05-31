@@ -10,7 +10,7 @@ import WorkWithMe from "../components/sections/workwithme";
 
 export default function Home() {
     return (
-        <Container className="c-homecontent" as="section">
+        <Container className="c-homecontent" as="section" maxW={['container.sm', 'container.md', 'container.lg', 'container.xl']}>
             <Stack direction={"column"} spacing={12} my={16}>
                 <MainHeading />
                 {/* Introduction section */}
