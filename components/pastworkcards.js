@@ -1,5 +1,6 @@
-import { Container, Wrap, Box, Grid, Text, Flex, Tag, TagLabel } from "@chakra-ui/react";
+import { Container, Wrap, Box, Grid, Text, Flex, Tag, TagLabel, Button } from "@chakra-ui/react";
 import Image from 'next/image';
+import NextLink from 'next/link';
 
 
 // Create function for languages tags
@@ -71,6 +72,16 @@ const AppsTag = ({ object }) => {
         </>
     )
 }
+
+// Create read more button component
+
+const ReadMore = () => {
+    return (
+        <Button className="c-readmore__button" variant={"link"} size={'sm'} alignItems='right'>
+            Read More
+        </Button>
+    )
+}
 export default function PastWorkCards({ title, techstack, text, imgsrc }) {
 
     return (
@@ -111,10 +122,11 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                         <AppsTag object={techstack} />
                     </Wrap>
                 </Box>
-                <Container className="c-pastworks__shorttext" mt={8} p={[null, 0]} >
-                    <Text fontSize="sm" color={'gray.50'}>
+                <Container className="c-pastworks__shorttextcontainer" mt={8} p={[null, 0]} display='flex' flexDirection={'column'} alignItems='end'>
+                    <Text className="c-pastworks__shorttext" fontSize="sm" color={'gray.50'} mb={2}>
                         {text}
                     </Text>
+                    <ReadMore />
                 </Container>
             </Flex>
         </Grid >

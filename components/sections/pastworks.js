@@ -40,9 +40,7 @@ export default function PastWorks() {
                 })
                 }
             </Flex>
-
         </Container >
 
     )
-
 }
