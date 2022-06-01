@@ -7,7 +7,7 @@ export default function Languages() {
     return (
         <Box className='c-languages__container'>
             <Text as={'strong'} fontSize='md' lineHeight={'6'} fontWeight='semibold'>Languages</Text>
-            <Wrap className="c-languages_languages" mt={'11px'}>
+            <Wrap className="c-languages_languages" mt={3}>
                 {Object.entries(ProgrammingLang).map(([key, value]) => {
                     return (
                         <Tag

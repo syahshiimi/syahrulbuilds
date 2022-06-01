@@ -16,7 +16,7 @@ export default function Techstack() {
             <Heading size="md" lineHeight="6" color="purple.100" mb={5} textAlign={'center'}>
                 My Tech Stack
             </Heading>
-            <Text fontSize="sm" lineHeight="5" mb={16} fontWeight='medium'>
+            <Text fontSize="sm" lineHeight="5" mb={10} fontWeight='medium'>
                 Apart from my tech stack, I have also acquired skills that were
                 related to arts and design such as the{" "}
                 <Text as="span" color="red.400">

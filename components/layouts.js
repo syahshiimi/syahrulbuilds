@@ -6,8 +6,8 @@ export default function Layout({ children }) {
     return (
         <Container bg='gray.700' minH={'100vh'} className="c-layoutcontainer" maxW={['container.sm', 'container.md', 'container.lg', 'container.xl', '100%']}>
             <Header />
-            <Flex grow={1} className='c-children' pb={'2vh'}>{children}</Flex>
+            <Container className='c-children' pb={'2vh'}>{children}</Container>
             <Footer />
-        </Container>
+        </Container >
     );
 }

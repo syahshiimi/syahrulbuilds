@@ -7,7 +7,7 @@ export default function Apps() {
     return (
         <Box className="c-apps__container">
             <Text as={'strong'} fontSize='md' lineHeight={'6'} fontWeight='semibold'>Apps</Text>
-            <Wrap className="c-languages_languages" mt={'11px'}>
+            <Wrap className="c-languages_languages" mt={3}>
                 {Object.entries(KnownApps).map(([key, value]) => {
                     return (
                         <Tag

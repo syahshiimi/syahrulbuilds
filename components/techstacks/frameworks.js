@@ -7,7 +7,7 @@ export default function Frameworks() {
     return (
         <Box frameworks='c-frameworks__container'>
             <Text as={'strong'} fontSize='md' lineHeight={'6'} fontWeight='semibold'>Franeworks</Text>
-            <Wrap className="c-languages_languages" mt={'11px'}>
+            <Wrap className="c-languages_languages" mt={3}>
                 {Object.entries(FrameworksLang).map(([key, value]) => {
                     return (
                         <Tag
