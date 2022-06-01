@@ -25,7 +25,7 @@ export default function Introduction() {
                 lineHeight={'6'}
                 color={"red.200"}
                 textAlign='left'
-                fontWeight='bold'>
+                fontWeight='semibold'>
                 Currently I am looking to join a software team that would allow me to grow and improve as a frontend developer.
 
                 I am open to positions that focuses on the frontend.
