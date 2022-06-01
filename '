@@ -1,4 +1,4 @@
-import { Container, Wrap, Box, Grid, Text, Flex, Tag, TagLabel, Button, GridItem, Spacer } from "@chakra-ui/react";
+import { Container, Wrap, Box, Grid, Text, Flex, Tag, TagLabel, Button, GridItem, Stack } from "@chakra-ui/react";
 import Image from 'next/image';
 import NextLink from 'next/link';
 
@@ -96,16 +96,12 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                 className="c-pastworks__heading">
                 {title}
             </Text>
-            <Flex
-                className="c-pastworks__contentcontainer"
-                direction={['column', 'row-reverse']}
-                columnGap={4}>
+            <Stack direction={['column', 'row']}>
                 <Box
                     display={'flex'}
                     flexDirection={'column'}
                     className="c-pastworks__imageandtechstack"
                     mt={[8, 7]}
-                    maxW={['100%', '200px']}
                 >
                     <Image
                         src={imgsrc}
@@ -139,7 +135,7 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                     </Text>
                     <ReadMore />
                 </Container>
-            </Flex>
+            </Stack>
         </Grid >
     )
 
