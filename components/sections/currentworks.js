@@ -11,7 +11,7 @@ export default function CurrentWorksContent() {
         <Box className="c-homecontent__currentworks">
             <Box className="c-currentworks__textcontainer" mt={94}>
                 <Heading
-                    size={'md'}
+                    fontSize={['md', 'lg']}
                     color='pink.100'
                     mb={[5, 4]}
                     textAlign={['center', 'left']}
