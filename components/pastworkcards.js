@@ -2,90 +2,20 @@ import { Container, Wrap, Box, Grid, Text, Flex, Tag, TagLabel, Button, GridItem
 import Image from 'next/image';
 import NextLink from 'next/link';
 
+// Import Tag Components
+import LanguagesTag from "./tags/languagestag";
+import FrameworksTag from "./tags/frameworkstag";
+import AppsTag from "./tags/appstag";
 
-// Create function for languages tags
-const LanguagesTag = ({ object }) => {
-    const { languages = [] } = object;
-    return (
-        <>
-            {(languages) ? languages.map((item, index) => {
-                return (
-                    <Tag
-                        key={index}
-                        className="c-languages__tag"
-                        size={'sm'}
-                        variant={'solid'}
-                        colorScheme='purple'>
-                        <TagLabel>
-                            {item}
-                        </TagLabel>
-                    </Tag>
-                )
-            }) : null
-            }
-        </>
-    )
-}
+// Import Button
+import ReadMore from "./readmorebutton";
 
-const FrameworksTag = ({ object }) => {
-    const { frameworks = [] } = object;
-    return (
-        <>
-            {(frameworks) ? frameworks.map((item, index) => {
-                return (
-                    <Tag
-                        key={index}
-                        className="c-frameworks_tag"
-                        size={'sm'}
-                        variant={'solid'}
-                        colorScheme='blue'>
-                        <TagLabel>
-                            {item}
-                        </TagLabel>
-                    </Tag>
-                )
-            }) : null
-            }
-        </>
-    )
-}
 
-const AppsTag = ({ object }) => {
-    const { apps = [] } = object;
-    return (
-        <>
-            {(apps) ? apps.map((item, index) => {
-                return (
-                    <Tag
-                        key={index}
-                        className="c-apps_tag"
-                        size={'sm'}
-                        variant={'solid'}
-                        colorScheme='pink'>
-                        <TagLabel>
-                            {item}
-                        </TagLabel>
-                    </Tag>
-                )
-            }) : null
-            }
-        </>
-    )
-}
 
-// Create read more button component
-
-const ReadMore = () => {
-    return (
-        <Button className="c-readmore__button" variant={"link"} size={'sm'} alignItems='right'>
-            Read More
-        </Button>
-    )
-}
 export default function PastWorkCards({ title, techstack, text, imgsrc }) {
 
     return (
-        <Grid className="c-pastworks" mt={8}>
+        <Grid className="c-pastworks" mt={10}>
             <Text
                 fontSize={'md'}
                 lineHeight={6}
@@ -116,6 +46,7 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                     <Text
                         fontSize='sm'
                         as='strong'
+                        mt={4}
                         textAlign={'right'}
                         color='gray.300'
                         className={'c-pastworks__title'}>
