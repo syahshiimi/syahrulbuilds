@@ -13,13 +13,13 @@ export default function CurrentWorksContent() {
                 <Heading
                     size={'md'}
                     color='pink.100'
-                    mb={5}
-                    textAlign={'center'}
+                    mb={[5, 4]}
+                    textAlign={['center', 'left']}
                     className="c-currentworks__textheading">
                     What I&apos;m Building
                 </Heading>
                 <Text className="c-currentworks__content"
-                    fontSize={'sm'}
+                    fontSize={['sm', 'md']}
                     color='gray.50'
                 >
                     I&apos;ve spent time working with institutions working on grant projects. I enjoy working on research projects especially in the humanities as they are often impactful in nature.

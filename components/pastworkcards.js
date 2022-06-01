@@ -96,12 +96,13 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                 className="c-pastworks__heading">
                 {title}
             </Text>
-            <Flex className="c-pastworks__flexcontainer" direction={['column', 'row-reverse']} columnGap={[0, 8]}>
+            <Flex className="c-pastworks__flexcontainer" direction={['column', 'row-reverse']} columnGap={[0, 2]}>
                 <Box
                     display={'flex'}
                     flexDirection={'column'}
                     className="c-pastworks__imageandtechstack"
-                    mt={6}>
+                    mt={6}
+                >
                     <Image
                         src={imgsrc}
                         alt='card image'
@@ -122,7 +123,12 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                         <AppsTag object={techstack} />
                     </Wrap>
                 </Box>
-                <Container className="c-pastworks__shorttextcontainer" mt={8} p={[null, 0]} display='flex' flexDirection={'column'} alignItems='end'>
+                <Container
+                    className="c-pastworks__shorttextcontainer"
+                    mt={[8, 7]} p={[null, 0]}
+                    display='flex'
+                    flexDirection={'column'}
+                    alignItems='end'>
                     <Text className="c-pastworks__shorttext" fontSize="sm" color={'gray.50'} mb={2}>
                         {text}
                     </Text>
