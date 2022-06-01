@@ -13,10 +13,10 @@ export default function Techstack() {
         <Box
             className="c-homecontent__techstack"
             mt={28} color={'gray.50'}>
-            <Heading size="md" lineHeight="6" color="purple.100" mb={5} textAlign={'center'}>
+            <Heading fontSize={["md", "lg"]} lineHeight="6" color="purple.100" mb={5} textAlign={'center'}>
                 My Tech Stack
             </Heading>
-            <Text fontSize={['sm', 'md', 'lg']} lineHeight="5" mb={10} fontWeight='medium'>
+            <Text fontSize={['sm', 'md', 'md']} lineHeight="5" mb={10} fontWeight='medium'>
                 Apart from my tech stack, I have also acquired skills that were
                 related to arts and design such as the{" "}
                 <Text as="span" color="red.400">
@@ -24,7 +24,7 @@ export default function Techstack() {
                 </Text>{" "}
                 and proficiency in graphics and media related content.
             </Text>
-            <SimpleGrid columns={[1, 1, 3]} className='c-homecontent__languages'
+            <SimpleGrid columns={[1, 3]} className='c-homecontent__languages'
                 spacing={5}
             >
                 <Languages />

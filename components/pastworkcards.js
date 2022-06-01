@@ -1,4 +1,4 @@
-import { Container, Wrap, Heading, Text, Flex, Tag, TagLabel } from "@chakra-ui/react";
+import { Container, Wrap, Box, Grid, Text, Flex, Tag, TagLabel } from "@chakra-ui/react";
 import Image from 'next/image';
 
 
@@ -74,44 +74,50 @@ const AppsTag = ({ object }) => {
 export default function PastWorkCards({ title, techstack, text, imgsrc }) {
 
     return (
-        <Flex className="c-pastworks" direction={'column'} mt={8} >
+        <Grid className="c-pastworks" mt={8}>
             <Text
                 fontSize={'md'}
                 lineHeight={6}
-                align={'right'}
+                align={['right', 'left']}
                 color='gray.100'
                 as={'strong'}
-                pl={24}
+                pl={[24, 0]}
                 className="c-pastworks__heading">
                 {title}
             </Text>
-            <Container className="c-pastworks__image" mt={6}>
-                <Image
-                    src={imgsrc}
-                    alt='card image'
-                    width={778}
-                    height={477}
-                />
-            </Container>
-            <Text
-                fontSize='sm'
-                align={'right'}
-                as='strong'
-                color='gray.300'
-                className={'c-pastworks__title'}>
-                Tech Stack
-            </Text>
-            <Wrap className="c-pastworks__tagscontainer" justify={'right'} mt={3}>
-                <LanguagesTag object={techstack} />
-                <FrameworksTag object={techstack} />
-                <AppsTag object={techstack} />
-            </Wrap>
-            <Container className="c-pastworks__shorttext" mt={8}>
-                <Text fontSize="sm" color={'gray.50'}>
-                    {text}
-                </Text>
-            </Container>
-        </Flex >
+            <Flex className="c-pastworks__flexcontainer" direction={['column', 'row-reverse']} columnGap={[0, 8]}>
+                <Box
+                    display={'flex'}
+                    flexDirection={'column'}
+                    className="c-pastworks__imageandtechstack"
+                    mt={6}>
+                    <Image
+                        src={imgsrc}
+                        alt='card image'
+                        width={778}
+                        height={477}
+                    />
+                    <Text
+                        fontSize='sm'
+                        as='strong'
+                        textAlign={'right'}
+                        color='gray.300'
+                        className={'c-pastworks__title'}>
+                        Tech Stack
+                    </Text>
+                    <Wrap className="c-pastworks__tagscontainer" justify={'right'} mt={3}>
+                        <LanguagesTag object={techstack} />
+                        <FrameworksTag object={techstack} />
+                        <AppsTag object={techstack} />
+                    </Wrap>
+                </Box>
+                <Container className="c-pastworks__shorttext" mt={8} p={[null, 0]} >
+                    <Text fontSize="sm" color={'gray.50'}>
+                        {text}
+                    </Text>
+                </Container>
+            </Flex>
+        </Grid >
     )
 
 }

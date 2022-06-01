@@ -3,7 +3,7 @@ import { Box, Button, Container, Flex, Heading, Stack, Text, useColorMode } from
 // Page Sections 
 import MainHeading from "../components/sections/heading";
 import TechStack from "../components/sections/techstack";
-import PastWorksContent from "../components/sections/pastworks";
+import PastWorks from "../components/sections/pastworks";
 import CurrentWorks from "../components/sections/currentworks";
 import Introduction from "../components/sections/introduction";
 import WorkWithMe from "../components/sections/workwithme";
@@ -19,7 +19,7 @@ export default function Home() {
             {/* Techstack section */}
             <TechStack />
             {/* Pastworks section */}
-            <PastWorksContent />
+            <PastWorks />
             {/* current Works section */}
             <CurrentWorks />
             {/* Work With Me section */}

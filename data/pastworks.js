@@ -1,5 +1,5 @@
 // Object of past words
-export const PastWorks = {
+export const PastWorksContent = {
     Firstwork: {
         title: 'NTU Art, Design & Media',
         imgsrc: '/adm_card_image.png',
