@@ -105,7 +105,7 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                     flexDirection={'column'}
                     className="c-pastworks__imageandtechstack"
                     mt={[8, 7]}
-                    maxW={['100%', '200px']}
+                    maxW={['100%', '250px']}
                 >
                     <Image
                         src={imgsrc}
