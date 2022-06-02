@@ -4,7 +4,12 @@ import NextLink from 'next/link'; // aliased from link to NextLink
 
 export default function Header() {
     return (
-        <Container className="c-title" pt={10} >
+        <Container
+            className="c-title"
+            pt={10}
+
+            maxW={['container.sm', 'container.md', 'container.lg', 'container.xl', '100%']}
+        >
             <NextLink href="/" passHref>
                 <Link >
                     <Heading color={'gray.50'} size='md' >
