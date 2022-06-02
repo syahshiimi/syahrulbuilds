@@ -19,7 +19,7 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
             <Text
                 fontSize={'md'}
                 lineHeight={6}
-                align={['right', 'left']}
+                align={['right', 'right', 'left']}
                 color='gray.100'
                 as={'strong'}
                 pl={[24, 0]}
@@ -28,14 +28,14 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
             </Text>
             <Flex
                 className="c-pastworks__contentcontainer"
-                direction={['column', 'row-reverse']}
+                direction={['column', 'column', 'row-reverse']}
                 columnGap={4}>
                 <Box
                     display={'flex'}
                     flexDirection={'column'}
                     className="c-pastworks__imageandtechstack"
                     mt={[8, 7]}
-                    maxW={['100%', '250px']}
+                    maxW={['100%', '100%', '250px']}
                 >
                     <Image
                         src={imgsrc}

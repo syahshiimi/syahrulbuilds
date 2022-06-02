@@ -3,18 +3,21 @@ import { FrameworksLang } from "../../data/languages";
 import { HiOutlineChip } from "react-icons/hi";
 
 
+import { Sorter } from "../../utils/sorter";
+
 export default function Frameworks() {
+    const SortArr = Sorter(FrameworksLang);
     return (
         <Box frameworks='c-frameworks__container'>
             <Text as={'strong'} fontSize='md' lineHeight={'6'} fontWeight='semibold'>Franeworks</Text>
             <Wrap className="c-languages_languages" mt={3}>
-                {Object.entries(FrameworksLang).map(([key, value]) => {
+                {SortArr.map((value, index) => {
                     return (
                         <Tag
                             colorScheme='blue'
                             size='sm'
                             variant={'solid'}
-                            key={key}>
+                            key={index}>
                             <TagLeftIcon as={HiOutlineChip} />
                             <TagLabel>
                                 {value}

@@ -24,7 +24,7 @@ export default function Techstack() {
                 </Text>{" "}
                 and proficiency in graphics and media related content.
             </Text>
-            <SimpleGrid columns={[1, 3]} className='c-homecontent__languages'
+            <SimpleGrid columns={[1, 1, 3]} className='c-homecontent__languages'
                 spacing={5}
             >
                 <Languages />

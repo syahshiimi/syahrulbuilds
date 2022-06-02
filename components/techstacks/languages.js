@@ -3,18 +3,23 @@ import { ProgrammingLang } from "../../data/languages";
 import { HiOutlineTerminal } from 'react-icons/hi';
 
 
-export default function Languages() {
+import { Sorter } from "../../utils/sorter";
+
+export default function Languages({ object }) {
+
+    const SortArr = Sorter(ProgrammingLang);
+
     return (
         <Box className='c-languages__container'>
             <Text as={'strong'} fontSize='md' lineHeight={'6'} fontWeight='semibold'>Languages</Text>
             <Wrap className="c-languages_languages" mt={3}>
-                {Object.entries(ProgrammingLang).map(([key, value]) => {
+                {SortArr.map((value, index) => {
                     return (
                         <Tag
                             colorScheme='purple'
                             size='sm'
                             variant={'solid'}
-                            key={key}>
+                            key={index}>
                             <TagLeftIcon as={HiOutlineTerminal} />
                             <TagLabel>
                                 {value}
