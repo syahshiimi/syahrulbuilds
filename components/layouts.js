@@ -14,7 +14,7 @@ export default function Layout({ children }) {
             <Container
                 className='c-children'
                 pb={'2vh'}
-                maxW={['container.sm', 'container.md', 'container.lg', 'container.xl', 'container.2xl']}>{children}</Container>
+                maxW={['container.sm', 'container.md']}>{children}</Container>
             <Footer />
         </Container >
     );

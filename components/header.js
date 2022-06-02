@@ -8,7 +8,7 @@ export default function Header() {
             className="c-title"
             pt={10}
 
-            maxW={['container.sm', 'container.md', 'container.lg', 'container.xl', '100%']}
+            maxW={['container.sm', 'container.md']}
         >
             <NextLink href="/" passHref>
                 <Link >
