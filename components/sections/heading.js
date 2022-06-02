@@ -4,17 +4,20 @@ export default function MainHeading() {
     return (
         <Heading
             className="c-homecontent__heading"
-            as="h2"
-            size="md"
+            fontSize={["md", 'md', 'lg', 'xl']}
             align="left"
             color={"gray.50"}
         >
             Hi!, I’m Syahrul. I’m a{" "}
-            <Text as="span" color="blue.500">
+            <Text as="span" color="blue.500"
+                fontSize={["md", 'md', 'lg', 'xl']}
+            >
                 frontend developer
             </Text>{" "}
             and a{" "}
-            <Text as="span" color="red.500">
+            <Text as="span"
+                fontSize={["md", 'md', 'lg', 'xl']}
+                color="red.500">
                 practicing visual artist.
             </Text>
         </Heading>

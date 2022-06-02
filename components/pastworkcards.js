@@ -29,7 +29,7 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
             <Flex
                 className="c-pastworks__contentcontainer"
                 direction={['column', 'column', 'row-reverse']}
-                columnGap={12}>
+                columnGap={[null, null, 8]}>
                 <Box
                     display={'flex'}
                     flexDirection={'column'}
