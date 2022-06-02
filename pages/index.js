@@ -16,7 +16,7 @@ export default function Home() {
             as="section"
             grow={'1'}
         >
-            <Stack direction={"column"} spacing={12} mt={20} >
+            <Stack direction={"column"} spacing={8} mt={20} >
                 <MainHeading />
                 {/* Introduction section */}
                 <Introduction />

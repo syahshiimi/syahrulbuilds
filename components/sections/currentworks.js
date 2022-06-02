@@ -11,16 +11,18 @@ export default function CurrentWorksContent() {
         <Box className="c-homecontent__currentworks">
             <Box className="c-currentworks__textcontainer" mt={94}>
                 <Heading
-                    fontSize={['md', 'lg']}
+                    fontSize={["lg", 'lg', 'xl']}
                     color='pink.100'
                     mb={[5, 4]}
-                    textAlign={['center', 'left']}
+                    textAlign={['left']}
                     className="c-currentworks__textheading">
                     What I&apos;m Building
                 </Heading>
                 <Text className="c-currentworks__content"
                     fontSize={['sm', 'md']}
                     color='gray.50'
+                    lineHeight={5}
+                    fontWeight='medium'
                 >
                     I&apos;ve spent time working with institutions working on grant projects. I enjoy working on research projects especially in the humanities as they are often impactful in nature.
                 </Text>

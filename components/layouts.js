@@ -11,7 +11,10 @@ export default function Layout({ children }) {
             className="c-layoutcontainer"
             maxW={['container.sm', 'container.md', 'container.lg', 'container.xl', '100%']}>
             <Header />
-            <Container className='c-children' pb={'2vh'} maxW={['container.sm', 'container.md', 'container.lg', 'container.xl', 'container.2xl']}>{children}</Container>
+            <Container
+                className='c-children'
+                pb={'2vh'}
+                maxW={['container.sm', 'container.md', 'container.lg', 'container.xl', 'container.2xl']}>{children}</Container>
             <Footer />
         </Container >
     );

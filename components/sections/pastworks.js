@@ -11,16 +11,18 @@ export default function PastWorks() {
         <Container className="c-homecontent__pastworks" maxW={['container.sm', 'container.md']} px={[0]}>
             < Box className="c-pastworks__textcontainer" mt={94} >
                 <Heading
-                    fontSize={['md', 'lg']}
+                    fontSize={["lg", 'lg', 'xl']}
                     color='orange.100'
                     mb={[5, 4]}
-                    textAlign={['center', 'left']}
+                    textAlign={['left']}
                     className="c-pastworks__textheading">
                     What I&apos;ve Built
                 </Heading>
                 <Text className="c-pastworks__content"
                     fontSize={['sm', 'md']}
                     color='gray.50'
+                    lineHeight={5}
+                    fontWeight='medium'
                 >
                     I&apos;ve spent time working with institutions working on grant projects. I enjoy working on research projects especially in the humanities as they are often impactful in nature.
                 </Text>

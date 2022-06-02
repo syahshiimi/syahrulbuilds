@@ -29,13 +29,13 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
             <Flex
                 className="c-pastworks__contentcontainer"
                 direction={['column', 'column', 'row-reverse']}
-                columnGap={4}>
+                columnGap={12}>
                 <Box
                     display={'flex'}
                     flexDirection={'column'}
                     className="c-pastworks__imageandtechstack"
                     mt={[8, 7]}
-                    maxW={['100%', '100%', '250px']}
+                    maxW={['100%', '100%', '330px']}
                 >
                     <Image
                         src={imgsrc}
