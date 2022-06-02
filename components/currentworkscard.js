@@ -16,10 +16,10 @@ export default function CurrentWorkCards({ title, techstack, text, imgsrc }) {
             <Text
                 fontSize={'md'}
                 lineHeight={6}
-                align={['right', 'right']}
+                textAlign={['left', 'right']}
                 color='gray.100'
                 as={'strong'}
-                pl={[24, 0]}
+                pr={[24, 0]}
                 className="c-currentworks__heading">
                 {title}
             </Text>
