@@ -1,4 +1,4 @@
-import { Container, Wrap, Box, Text, Flex, Tag, TagLabel } from "@chakra-ui/react";
+import { Container, Wrap, Box, Text, Flex, Tag, TagLabel, Grid } from "@chakra-ui/react";
 import Image from 'next/image';
 
 // Import Tag Components
@@ -12,26 +12,27 @@ import ReadMore from "./readmorebutton";
 export default function CurrentWorkCards({ title, techstack, text, imgsrc }) {
 
     return (
-        <Flex className="c-currentworks" direction={'column'} mt={10} >
+        <Grid className="c-currentworks" mt={10} >
             <Text
                 fontSize={'md'}
                 lineHeight={6}
-                align={'left'}
+                align={['right', 'right']}
                 color='gray.100'
                 as={'strong'}
+                pl={[24, 0]}
                 className="c-currentworks__heading">
                 {title}
             </Text>
             <Flex
-                direction={['column', 'row']}
-                columnGap={4}
+                direction={['column', 'column', 'row']}
+                columnGap={12}
                 className="c-pastworks__contentcontainer">
                 <Box
                     display={'flex'}
                     flexDirection={'column'}
                     mt={[8, 7]}
-                    maxW={['100%', '250px']}
                     className="c-currentworks__imageandtechstack"
+                    maxW={['100%', '100%', '330px']}
                 >
                     <Image
                         src={imgsrc}
@@ -65,7 +66,7 @@ export default function CurrentWorkCards({ title, techstack, text, imgsrc }) {
                     <ReadMore />
                 </Container>
             </Flex>
-        </Flex >
+        </Grid >
     )
 
 }
