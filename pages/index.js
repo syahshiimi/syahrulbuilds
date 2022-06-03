@@ -1,5 +1,4 @@
-import { Box, Button, Container, Flex, Heading, Stack, Text, useColorMode } from "@chakra-ui/react";
-import axios from 'axios';
+import { Flex, Heading, Stack, Text } from "@chakra-ui/react";
 
 // Page Sections 
 import MainHeading from "../components/sections/heading";
@@ -9,12 +8,20 @@ import CurrentWorks from "../components/sections/currentworks";
 import Introduction from "../components/sections/introduction";
 import WorkWithMe from "../components/sections/workwithme";
 
-axios.get('http://localhost:1337/api/past-works').then(response => {
-    console.log(response);
-});
+export async function getStaticProps() {
+    // get data
+    const res = await fetch('http://localhost:1337/api/home-page/?populate=pastWorks,avatar');
+    const data = await res.json();
+    // return data
+    return {
+        props: { data },
+    }
+}
 
+export default function Home({ data }) {
+    const homePage = data.data.attributes;
+    console.log(homePage);
 
-export default function Home() {
     return (
         <Flex
             direction={"column"}
