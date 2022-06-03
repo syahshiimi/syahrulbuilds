@@ -8,19 +8,19 @@ import CurrentWorks from "../components/sections/currentworks";
 import Introduction from "../components/sections/introduction";
 import WorkWithMe from "../components/sections/workwithme";
 
+// Import lib
+import { loadContent } from '../lib/fetch-content';
+
 export async function getStaticProps() {
-    // get data
-    const res = await fetch('http://localhost:1337/api/home-page/?populate=pastWorks,avatar');
-    const data = await res.json();
-    // return data
+    const data = await loadContent('home-page/?populate=pastWorks,avatar');
     return {
         props: { data },
     }
+
 }
 
 export default function Home({ data }) {
     const homePage = data.data.attributes;
-    console.log(homePage);
 
     return (
         <Flex
@@ -29,11 +29,8 @@ export default function Home({ data }) {
             as="section"
             grow={'1'}
         >
-            <Stack direction={"column"} spacing={[8]} mt={20} >
-                <MainHeading />
-                {/* Introduction section */}
-                <Introduction />
-            </Stack>
+            {/* Introduction section */}
+            <Introduction content={homePage.briefMotivation} />
             {/* Techstack section */}
             <TechStack />
             {/* Pastworks section */}

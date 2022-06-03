@@ -1,34 +1,20 @@
-import { Box, Container, Text, VStack } from '@chakra-ui/react';
+import { Box, Container, Stack, Text, VStack } from '@chakra-ui/react';
 
-export default function Introduction() {
+import Heading from "./heading";
+
+export default function Introduction({ content }) {
     return (
-        <VStack
-            className="c-homecontent__introduction"
-            as='section'
-            spacing={[4, 6]}
-            alignItems='start'
-        >
-            <Text
-                className="c-homecontent__selfintro"
-                fontSize={["sm", null, null, 'md']}
-                lineHeight="6"
-                color={"gray.50"}
-                fontWeight='semibold'
-            >
-                My former clients include Nanyang Technological University and National
-                University of Singapore.
-            </Text>
-            )
+        <Stack direction={'column'} spacing={[8]} mt={20}>
+            <Heading />
             <Text
                 className='c-homecontent__motivations'
                 fontSize={['md', null, 'lg']}
                 lineHeight={'6'}
                 color={"red.200"}
                 fontWeight='semibold'>
-                I am open to positions that focuses on the frontend.{" "}
-                Full CV
+                {content}
             </Text>
-        </VStack>
+        </Stack>
     )
 
 }
