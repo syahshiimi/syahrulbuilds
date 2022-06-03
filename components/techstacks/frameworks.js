@@ -1,12 +1,12 @@
 import { Box, Container, Tag, TagLabel, TagLeftIcon, Text, Wrap } from "@chakra-ui/react";
-import { FrameworksLang } from "../../data/languages";
 import { HiOutlineChip } from "react-icons/hi";
 
 
+// imort sorter function
 import { Sorter } from "../../utils/sorter";
 
-export default function Frameworks() {
-    const SortArr = Sorter(FrameworksLang);
+export default function Frameworks({ object }) {
+    const SortArr = Sorter(object);
     return (
         <Box frameworks='c-frameworks__container'>
             <Text as={'strong'} fontSize='md' lineHeight={'6'} fontWeight='semibold'>Franeworks</Text>

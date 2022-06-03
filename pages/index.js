@@ -12,16 +12,14 @@ import WorkWithMe from "../components/sections/workwithme";
 import { loadContent } from '../lib/fetch-content';
 
 export async function getStaticProps() {
-    const data = await loadContent('home-page/?populate=pastWorks,avatar');
+    const data = await loadContent('home-page/?populate=myTechStack,pastWorks,avatar');
     return {
-        props: { data },
+        props: { homePage: data },
     }
 
 }
 
-export default function Home({ data }) {
-    const homePage = data.data.attributes;
-
+export default function Home({ homePage }) {
     return (
         <Flex
             direction={"column"}
@@ -32,7 +30,7 @@ export default function Home({ data }) {
             {/* Introduction section */}
             <Introduction content={homePage.briefMotivation} />
             {/* Techstack section */}
-            <TechStack />
+            <TechStack content={homePage.techStackInfo} tags={homePage.myTechStack} />
             {/* Pastworks section */}
             <PastWorks />
             {/* current Works section */}

@@ -1,4 +1,4 @@
-export const ProgrammingLang = { 
+export const ProgrammingLang = {
     languageOne: 'HTML',
     languageTwo: 'CSS',
     languageThree: 'JavaScript',
@@ -8,7 +8,7 @@ export const ProgrammingLang = {
     languageseven: 'Markdown'
 }
 
-export const FrameworksLang =  {
+export const FrameworksLang = {
     frameworkOne: 'React',
     frameworkTwo: 'Gatsby',
     frameworkThree: 'Tensorflow',
