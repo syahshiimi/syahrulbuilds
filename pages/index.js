@@ -1,4 +1,5 @@
 import { Box, Button, Container, Flex, Heading, Stack, Text, useColorMode } from "@chakra-ui/react";
+import axios from 'axios';
 
 // Page Sections 
 import MainHeading from "../components/sections/heading";
@@ -7,6 +8,8 @@ import PastWorks from "../components/sections/pastworks";
 import CurrentWorks from "../components/sections/currentworks";
 import Introduction from "../components/sections/introduction";
 import WorkWithMe from "../components/sections/workwithme";
+
+
 
 export default function Home() {
     return (
