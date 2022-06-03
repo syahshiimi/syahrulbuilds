@@ -9,6 +9,9 @@ import CurrentWorks from "../components/sections/currentworks";
 import Introduction from "../components/sections/introduction";
 import WorkWithMe from "../components/sections/workwithme";
 
+axios.get('http://localhost:1337/api/past-works').then(response => {
+    console.log(response);
+});
 
 
 export default function Home() {
