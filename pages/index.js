@@ -22,8 +22,11 @@ export async function getStaticProps() {
 }
 
 export default function Home({ homePage }) {
+
+    console.log(homePage);
+    // destructure objects
     const { url } = homePage.avatar.data.attributes;
-    console.log(url);
+    const { emailMe, workWithMeContent } = homePage;
 
     return (
         <Flex
@@ -41,7 +44,7 @@ export default function Home({ homePage }) {
             {/* current Works section */}
             <CurrentWorks />
             {/* Work With Me section */}
-            <WorkWithMe />
+            <WorkWithMe email={emailMe} content={workWithMeContent} />
         </Flex>
     );
 }

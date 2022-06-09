@@ -1,7 +1,7 @@
 import { Box, Link, Flex, Heading, Text } from "@chakra-ui/react";
 
 
-export default function WorkWithMe() {
+export default function WorkWithMe({ email, content }) {
     return (
         <Flex
             direction={'column'}
@@ -23,10 +23,10 @@ export default function WorkWithMe() {
                 fontSize={'sm'}
                 as='strong'
                 textAlign='center'>
-                I am also open to working on art collaborations that may include anything related web technologies, digital experiences and interfaces.
+                {content}
             </Text>
             <Text className="c-workwithme__email" fontSize={'lg'} color='gray.300' as={'strong'} mt='50px'>
-                <Link href="mailto:syahrlanuar95@gmail.com">Drop me an email!</Link>
+                <Link href="mailto:`${email}`">Drop me an email!</Link>
             </Text>
         </Flex>
     )
