@@ -6,7 +6,7 @@ import PastWorkCards from "../../components/pastworkcards";
 // Import Data
 import { PastWorksContent } from "../../data/pastworks";
 
-export default function PastWorks() {
+export default function PastWorks({ content }) {
     return (
         <Container className="c-homecontent__pastworks" maxW={['container.sm', 'container.md']} px={[0]}>
             < Box className="c-pastworks__textcontainer" mt={94} >
