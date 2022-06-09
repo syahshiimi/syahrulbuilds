@@ -1,21 +1,22 @@
-import { Avatar, Box, Container, Stack, Text, VStack } from '@chakra-ui/react';
+import { Avatar, Box, Heading, Container, Stack, Text, VStack } from '@chakra-ui/react';
 
-import Heading from "./heading";
 
+import Hello from './heading';
 export default function Introduction({ content, avatarUrl }) {
     console.log(avatarUrl);
     return (
-        <Stack direction={'column'} spacing={[8]} mt={20}>
-            <Avatar name='Syahrul Anuar' src={`http://localhost:1337${avatarUrl}`} size={'xl'} mb={4} />
-            <Heading />
-            <Text
-                className='c-homecontent__motivations'
-                fontSize={['md', null, 'lg']}
-                lineHeight={'6'}
-                color={"red.200"}
-                fontWeight='semibold'>
-                {content}
-            </Text>
+        <Stack
+            direction={['column', null, 'row-reverse']}
+            spacing={[4, null, 16]}
+            mt={16}>
+            <Avatar
+                name='Syahrul Anuar'
+                src={`http://localhost:1337${avatarUrl}`}
+                size={['lg', 'xl', '2xl']}
+                mb={[4, null, 0]}
+                mt={[0, null, 4]}
+                mr={[0, null, 6]} />
+            <Hello content={content} />
         </Stack>
     )
 

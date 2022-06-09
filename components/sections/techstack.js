@@ -31,7 +31,7 @@ export default function Techstack({ content, tags }) {
     return (
         <Box
             className="c-homecontent__techstack"
-            mt={28} color={'gray.50'}>
+            mt={14} color={'gray.50'}>
             <Heading
                 fontSize={["lg", 'lg', 'xl']}
                 lineHeight="6"

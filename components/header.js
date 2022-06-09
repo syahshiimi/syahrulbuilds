@@ -11,9 +11,8 @@ export default function Header() {
         >
             <NextLink href="/" passHref>
                 <Link >
-                    <Heading color={'gray.50'} size='md' >
-                        Syahrul{"\n "} Anuar
-                    </Heading>
+                    <Heading color={'gray.50'} size={['md', null, 'lg']} >
+                        SA.                    </Heading>
                 </Link>
             </NextLink>
         </Container>
