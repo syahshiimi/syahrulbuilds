@@ -22,6 +22,9 @@ export async function getStaticProps() {
 }
 
 export default function Home({ homePage }) {
+    const { url } = homePage.avatar.data.attributes;
+    console.log(url);
+
     return (
         <Flex
             direction={"column"}
@@ -30,7 +33,7 @@ export default function Home({ homePage }) {
             grow={'1'}
         >
             {/* Introduction section */}
-            <Introduction content={homePage.briefMotivation} />
+            <Introduction content={homePage.briefMotivation} avatarUrl={url} />
             {/* Techstack section */}
             <TechStack content={homePage.techStackInfo} tags={homePage.myTechStack} />
             {/* Pastworks section */}
