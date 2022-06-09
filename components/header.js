@@ -7,7 +7,6 @@ export default function Header() {
         <Container
             className="c-title"
             pt={10}
-
             maxW={['container.sm', 'container.md']}
         >
             <NextLink href="/" passHref>
