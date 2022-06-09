@@ -1,20 +1,23 @@
-import { Box, Container, Text, Link, Heading } from "@chakra-ui/react";
+import { Flex, Text, Link, Heading, Button, Spacer } from "@chakra-ui/react";
 import Head from "next/head";
 import NextLink from 'next/link'; // aliased from link to NextLink
 
 export default function Header() {
     return (
-        <Container
-            className="c-title"
+        <Flex
+            className="c-topbar"
             pt={10}
+            px={4}
             maxW={['container.sm', 'container.md']}
         >
             <NextLink href="/" passHref>
-                <Link >
-                    <Heading color={'gray.50'} size={['md', null, 'lg']} >
+                <Link className="c-title" >
+                    <Heading color={'gray.50'} size={['md', 'lg', 'lg']} >
                         SA.                    </Heading>
                 </Link>
             </NextLink>
-        </Container>
+            <Spacer />
+            <Button className="c-colormodetoggle" />
+        </Flex>
     );
 }

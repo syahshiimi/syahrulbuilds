@@ -15,7 +15,7 @@ export default function Frameworks({ object }) {
                     return (
                         <Tag
                             colorScheme='blue'
-                            size='sm'
+                            size={['sm', null, 'md']}
                             variant={'solid'}
                             key={index}>
                             <TagLeftIcon as={HiOutlineChip} />

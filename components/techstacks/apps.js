@@ -13,7 +13,7 @@ export default function Apps({ object }) {
                     return (
                         <Tag
                             colorScheme='pink'
-                            size='sm'
+                            size={['sm', null, 'md']}
                             variant={'solid'}
                             key={index}>
                             <TagLeftIcon boxSize={'12px'} as={HiOutlineBriefcase} />

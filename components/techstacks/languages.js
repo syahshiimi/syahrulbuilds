@@ -17,7 +17,7 @@ export default function Languages({ object }) {
                     return (
                         <Tag
                             colorScheme='purple'
-                            size='sm'
+                            size={['sm', null, 'md']}
                             variant={'solid'}
                             key={index}>
                             <TagLeftIcon as={HiOutlineTerminal} />
