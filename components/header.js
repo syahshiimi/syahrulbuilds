@@ -19,7 +19,6 @@ export default function Header() {
                 </Link>
             </NextLink>
             <Spacer />
-            <Button onClick={toggleColorMode} className="c-colormodetoggle">Toggle</Button>
         </Flex>
     );
 }
