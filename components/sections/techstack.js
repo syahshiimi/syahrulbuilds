@@ -42,8 +42,9 @@ export default function Techstack({ content, tags }) {
             </Heading>
             <ReactMarkdown
                 components={ChakraUIRenderer(newTheme)}
-                children={content}
-                skipHtml />
+                skipHtml>
+                {content}
+            </ReactMarkdown>
             <SimpleGrid columns={[1, 1, 3]} className='c-homecontent__languages'
                 spacing={5}
             >

@@ -1,7 +1,6 @@
 import { Flex, Heading, Stack, Text } from "@chakra-ui/react";
 
 // Page Sections 
-import MainHeading from "../components/sections/heading";
 import TechStack from "../components/sections/techstack";
 import PastWorks from "../components/sections/pastworks";
 import CurrentWorks from "../components/sections/currentworks";
@@ -12,7 +11,10 @@ import WorkWithMe from "../components/sections/workwithme";
 import { loadContent } from '../lib/fetch-content';
 
 export async function getStaticProps() {
+
     const data = await loadContent('home-page/?populate=myTechStack,pastWorks,avatar');
+
+    // return the object we want
     return {
         props: { homePage: data },
     }
