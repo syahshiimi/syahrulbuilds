@@ -1,8 +1,9 @@
-import { Flex, Text, Link, Heading, Button, Spacer } from "@chakra-ui/react";
+import { Flex, Link, Heading, Button, Spacer, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
 import NextLink from 'next/link'; // aliased from link to NextLink
 
 export default function Header() {
+    const { colorMode, toggleColorMode } = useColorMode();
     return (
         <Flex
             className="c-topbar"
@@ -13,11 +14,12 @@ export default function Header() {
             <NextLink href="/" passHref>
                 <Link className="c-title" >
                     <Heading color={'gray.50'} size={['md', 'lg', 'lg']} >
-                        SA.                    </Heading>
+                        SA.
+                    </Heading>
                 </Link>
             </NextLink>
             <Spacer />
-            <Button className="c-colormodetoggle" />
+            <Button onClick={toggleColorMode} className="c-colormodetoggle">Toggle</Button>
         </Flex>
     );
 }
