@@ -1,4 +1,4 @@
-import { Stack, Box, Container, Heading, Tag, Text, Wrap, Grid, SimpleGrid } from "@chakra-ui/react";
+import { Stack, Box, Container, Heading, Tag, Text, Wrap, Grid, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
 import ReactMarkdown from 'react-markdown';
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 
@@ -9,6 +9,7 @@ import Apps from "../../components/techstacks/apps";
 
 export default function Techstack({ content, tags }) {
 
+    const textColor = useColorModeValue('white', 'gray.50');
     // create specific text theme
     const newTheme = {
         p: props => {
@@ -17,9 +18,9 @@ export default function Techstack({ content, tags }) {
                 <Text
                     className="c-techstack__content"
                     fontSize={['sm', 'md', 'md']}
-                    lineHeight="5"
+                    color={textColor}
                     mb={10}
-                    fontWeight='medium' >
+                    fontWeight='regular' >
                     {children}
                 </Text>
             );

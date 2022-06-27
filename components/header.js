@@ -7,6 +7,7 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 export default function Header() {
     const { colorMode, toggleColorMode } = useColorMode();
+    const color = useColorModeValue('gray.700', 'gray.50')
     return (
         <Flex
             className="c-topbar"
@@ -16,7 +17,7 @@ export default function Header() {
         >
             <NextLink href="/" passHref>
                 <Link className="c-title" >
-                    <Heading color={'gray.50'} size={['md', 'lg', 'lg']} >
+                    <Heading color={color} size={['md', 'lg', 'lg']} >
                         SA.
                     </Heading>
                 </Link>
