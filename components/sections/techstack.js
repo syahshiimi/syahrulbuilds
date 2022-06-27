@@ -9,7 +9,9 @@ import Apps from "../../components/techstacks/apps";
 
 export default function Techstack({ content, tags }) {
 
-    const textColor = useColorModeValue('white', 'gray.50');
+    const headingColor = useColorModeValue('purple.500', 'purple.100');
+    const textColor = useColorModeValue('gray.900', 'gray.50');
+    const skillsColor = useColorModeValue('gray.700', 'white');
     // create specific text theme
     const newTheme = {
         p: props => {
@@ -27,8 +29,6 @@ export default function Techstack({ content, tags }) {
         },
     };
 
-    // destructure tags
-
     return (
         <Box
             className="c-homecontent__techstack"
@@ -36,7 +36,7 @@ export default function Techstack({ content, tags }) {
             <Heading
                 fontSize={["lg", 'lg', 'xl']}
                 lineHeight="6"
-                color="purple.100"
+                color={headingColor}
                 mb={[5, 4]}
                 textAlign={['left']}>
                 My Tech Stack
@@ -49,9 +49,9 @@ export default function Techstack({ content, tags }) {
             <SimpleGrid columns={[1, 1, 3]} className='c-homecontent__languages'
                 spacing={5}
             >
-                <Languages object={tags.programmingLang} />
-                <Frameworks object={tags.frameworks} />
-                <Apps object={tags.apps} />
+                <Languages object={tags.programmingLang} color={skillsColor} />
+                <Frameworks object={tags.frameworks} color={skillsColor} />
+                <Apps object={tags.apps} color={skillsColor} />
             </SimpleGrid>
         </Box >
     )

@@ -3,6 +3,7 @@ import { Stack, Heading, Text, useColorMode, useColorModeValue } from '@chakra-u
 export default function Hello({ content }) {
     const titleColor = useColorModeValue('gray.700', 'gray.200');
     const bodyColor = useColorModeValue('gray.700', 'gray.50');
+    const contentColor = useColorModeValue('red.700', 'red.200');
 
     return (
         <Stack direction={'column'} spacing={[4]}>
@@ -36,7 +37,7 @@ export default function Hello({ content }) {
                 className='c-homecontent__motivations'
                 fontSize={['sm', null, 'md']}
                 lineHeight={'6'}
-                color={"red.200"}
+                color={contentColor}
                 fontWeight='semibold'>
                 {content}
             </Text>
