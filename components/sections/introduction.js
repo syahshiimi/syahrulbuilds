@@ -1,9 +1,7 @@
 import { Avatar, Box, Heading, Container, Stack, Text, VStack } from '@chakra-ui/react';
 
-
-import Hello from './heading';
+import Hello from './hello';
 export default function Introduction({ content, avatarUrl }) {
-    console.log(avatarUrl);
     return (
         <Stack
             direction={['column', null, 'row-reverse']}

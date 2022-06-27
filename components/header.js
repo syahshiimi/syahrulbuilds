@@ -1,6 +1,9 @@
-import { Flex, Link, Heading, Button, Spacer, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Link, Heading, Button, Spacer, useColorMode, useColorModeValue, Icon } from "@chakra-ui/react";
 import Head from "next/head";
 import NextLink from 'next/link'; // aliased from link to NextLink
+
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+
 
 export default function Header() {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -19,6 +22,9 @@ export default function Header() {
                 </Link>
             </NextLink>
             <Spacer />
+            <Button onClick={toggleColorMode}>
+                {colorMode === 'dark' ? (<MoonIcon />) : (<SunIcon />)}
+            </Button>
         </Flex>
     );
 }

@@ -1,10 +1,13 @@
-import { Stack, Heading, Text } from '@chakra-ui/react';
+import { Stack, Heading, Text, useColorMode, useColorModeValue } from '@chakra-ui/react';
 
 export default function Hello({ content }) {
+    const titleColor = useColorModeValue('gray.700', 'gray.200');
+    const bodyColor = useColorModeValue('gray.700', 'gray.50');
+
     return (
         <Stack direction={'column'} spacing={[4]}>
             <Heading className='c-homecontent_hello'
-                color={'gray.200'}
+                color={titleColor}
                 fontSize={['xl', null, '2xl']}
                 mb={[0, null, 4]}>
                 Hi! I'm Syahrul Anuar
@@ -13,7 +16,7 @@ export default function Hello({ content }) {
                 className="c-homecontent__heading"
                 fontSize={["md", 'md', 'lg', 'xl']}
                 align="left"
-                color={"gray.50"}
+                color={bodyColor}
             >
                 I’m a{" "}
                 <Text as="span" color="blue.500"
