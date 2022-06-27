@@ -12,7 +12,7 @@ import ReadMore from "./readmorebutton";
 
 
 
-export default function PastWorkCards({ title, techstack, text, imgsrc }) {
+export default function PastWorkCards({ title, techstack, text, imgsrc, color }) {
 
     return (
         <Grid className="c-pastworks" mt={10}>
@@ -20,7 +20,7 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                 fontSize={'md'}
                 lineHeight={6}
                 align={['right', 'right', 'left']}
-                color='gray.100'
+                color={color.titleColor}
                 as={'strong'}
                 pl={[24, 0]}
                 className="c-pastworks__heading">
@@ -48,7 +48,7 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                         as='strong'
                         mt={4}
                         textAlign={'right'}
-                        color='gray.300'
+                        color={color.techstackColor}
                         className={'c-pastworks__title'}>
                         Tech Stack
                     </Text>
@@ -65,7 +65,7 @@ export default function PastWorkCards({ title, techstack, text, imgsrc }) {
                     flexGrow={1}
                     flexDirection={'column'}
                     alignItems='end'>
-                    <Text className="c-pastworks__shorttext" fontSize="sm" color={'gray.50'} mb={2}>
+                    <Text className="c-pastworks__shorttext" fontSize="sm" color={color.contentColor} mb={2}>
                         {text}
                     </Text>
                     <ReadMore />
