@@ -14,7 +14,7 @@ export default function PastWorks({ content }) {
     const pastworksColor = {
         titleColor: useColorModeValue('gray.700', 'gray.100'),
         techstackColor: useColorModeValue('gray.500', 'gray.300'),
-        contentColor: useColorModeValue('gray.600', 'gray.300')
+        contentColor: useColorModeValue('gray.600', 'gray.50')
     }
 
     return (

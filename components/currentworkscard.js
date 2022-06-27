@@ -9,15 +9,16 @@ import AppsTag from "./tags/appstag";
 // Import Button
 import ReadMore from "./readmorebutton";
 
-export default function CurrentWorkCards({ title, techstack, text, imgsrc }) {
+export default function CurrentWorkCards({ color, title, techstack, text, imgsrc }) {
 
+    console.log(color);
     return (
         <Grid className="c-currentworks" mt={10} >
             <Text
                 fontSize={'md'}
                 lineHeight={6}
                 textAlign={['left', 'right']}
-                color='gray.100'
+                color={color.titleColor}
                 as={'strong'}
                 pr={[24, 0]}
                 className="c-currentworks__heading">
@@ -46,7 +47,7 @@ export default function CurrentWorkCards({ title, techstack, text, imgsrc }) {
                         align={'left'}
                         mt={4}
                         as='strong'
-                        color='gray.300'
+                        color={color.techstackColor}
                         className={'c-currentworks__title'}>
                         Tech Stack
                     </Text>
@@ -60,7 +61,7 @@ export default function CurrentWorkCards({ title, techstack, text, imgsrc }) {
                     className="c-currentworks__shorttext"
                     mt={[8, 7]}
                     p={[null, 0]}>
-                    <Text fontSize="sm" color={'gray.50'} align={'right'} mb={2}>
+                    <Text fontSize="sm" color={color.contentColor} align={'right'} mb={2}>
                         {text}
                     </Text>
                     <ReadMore />
