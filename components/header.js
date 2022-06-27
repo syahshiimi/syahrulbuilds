@@ -13,7 +13,7 @@ export default function Header() {
             className="c-topbar"
             pt={10}
             px={4}
-            maxW={['container.sm', 'container.md']}
+            maxW={['container.sm', 'container.md', 'container.lg', 'container.xl']}
         >
             <NextLink href="/" passHref>
                 <Link className="c-title" >
