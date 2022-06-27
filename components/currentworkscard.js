@@ -1,4 +1,4 @@
-import { Container, Wrap, Box, Text, Flex, Tag, TagLabel, Grid } from "@chakra-ui/react";
+import { Container, Wrap, Box, Text, Flex, Tag, TagLabel, Grid, LightMode } from "@chakra-ui/react";
 import Image from 'next/image';
 
 // Import Tag Components
@@ -52,9 +52,11 @@ export default function CurrentWorkCards({ color, title, techstack, text, imgsrc
                         Tech Stack
                     </Text>
                     <Wrap className="c-currentworks__tagscontainer" justify={'left'} mt={3}>
-                        <LanguagesTag object={techstack} />
-                        <FrameworksTag object={techstack} />
-                        <AppsTag object={techstack} />
+                        <LightMode>
+                            <LanguagesTag object={techstack} />
+                            <FrameworksTag object={techstack} />
+                            <AppsTag object={techstack} />
+                        </LightMode>
                     </Wrap>
                 </Box>
                 <Container

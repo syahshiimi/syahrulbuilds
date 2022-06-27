@@ -1,4 +1,4 @@
-import { Container, Wrap, Box, Grid, Text, Flex, Tag, TagLabel, Button, GridItem, Spacer } from "@chakra-ui/react";
+import { Container, Wrap, Box, Grid, Text, Flex, Tag, TagLabel, Button, GridItem, Spacer, LightMode } from "@chakra-ui/react";
 import Image from 'next/image';
 import NextLink from 'next/link';
 
@@ -53,9 +53,11 @@ export default function PastWorkCards({ title, techstack, text, imgsrc, color })
                         Tech Stack
                     </Text>
                     <Wrap className="c-pastworks__tagscontainer" justify={'right'} mt={3}>
-                        <LanguagesTag object={techstack} />
-                        <FrameworksTag object={techstack} />
-                        <AppsTag object={techstack} />
+                        <LightMode>
+                            <LanguagesTag object={techstack} />
+                            <FrameworksTag object={techstack} />
+                            <AppsTag object={techstack} />
+                        </LightMode>
                     </Wrap>
                 </Box>
                 <Container

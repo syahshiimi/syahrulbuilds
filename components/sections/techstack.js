@@ -1,4 +1,4 @@
-import { Stack, Box, Container, Heading, Tag, Text, Wrap, Grid, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
+import { Stack, Box, Container, Heading, Tag, Text, Wrap, Grid, SimpleGrid, useColorModeValue, LightMode } from "@chakra-ui/react";
 import ReactMarkdown from 'react-markdown';
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 
@@ -49,9 +49,11 @@ export default function Techstack({ content, tags }) {
             <SimpleGrid columns={[1, 1, 3]} className='c-homecontent__languages'
                 spacing={5}
             >
-                <Languages object={tags.programmingLang} color={skillsColor} />
-                <Frameworks object={tags.frameworks} color={skillsColor} />
-                <Apps object={tags.apps} color={skillsColor} />
+                <LightMode>
+                    <Languages object={tags.programmingLang} color={skillsColor} />
+                    <Frameworks object={tags.frameworks} color={skillsColor} />
+                    <Apps object={tags.apps} color={skillsColor} />
+                </LightMode>
             </SimpleGrid>
         </Box >
     )
