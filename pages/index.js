@@ -1,4 +1,5 @@
 import { Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import React from 'react'
 
 // Page Sections 
 import TechStack from "../components/sections/techstack";
@@ -9,6 +10,9 @@ import WorkWithMe from "../components/sections/workwithme";
 
 // Import lib
 import { loadContent } from '../lib/fetch-content';
+
+// Import content
+import { react as Sample } from "../content/homepage.md";
 
 export async function getStaticProps() {
 
@@ -23,8 +27,6 @@ export async function getStaticProps() {
 
 export default function Home({ homePage }) {
 
-    console.log(homePage);
-    // destructure objects
     const { url } = homePage.avatar.data.attributes;
     const { emailMe, workWithMeContent } = homePage;
 

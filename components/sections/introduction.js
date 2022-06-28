@@ -1,7 +1,7 @@
 import { Avatar, Box, Heading, Container, Stack, Text, VStack } from '@chakra-ui/react';
 
 import Hello from './hello';
-export default function Introduction({ content, avatarUrl }) {
+export default function Introduction({ content }) {
     return (
         <Stack
             direction={['column', null, 'row-reverse']}
@@ -9,7 +9,7 @@ export default function Introduction({ content, avatarUrl }) {
             mt={16}>
             <Avatar
                 name='Syahrul Anuar'
-                src={`http://syahrulbuilds.herokuapp.com${avatarUrl}`}
+                src="/images/profile_picture.jpg" alt="profile picture"
                 size={['lg', 'xl', '2xl']}
                 mb={[4, null, 0]}
                 mt={[0, null, 4]}

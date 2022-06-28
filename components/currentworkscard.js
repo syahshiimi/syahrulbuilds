@@ -11,7 +11,6 @@ import ReadMore from "./readmorebutton";
 
 export default function CurrentWorkCards({ color, title, techstack, text, imgsrc }) {
 
-    console.log(color);
     return (
         <Grid className="c-currentworks" mt={10} >
             <Text
