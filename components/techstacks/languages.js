@@ -2,7 +2,7 @@ import { Box, Container, Tag, TagLabel, TagLeftIcon, Text, Wrap } from "@chakra-
 import { HiOutlineTerminal } from 'react-icons/hi';
 
 // import sorter function
-import { Sorter } from "../../utils/sorter";
+import { Sorter } from "../../lib/sorter";
 
 
 export default function Languages({ object, color }) {

@@ -1,6 +1,6 @@
 import { Box, Container, Tag, TagLabel, TagLeftIcon, Text, Wrap } from "@chakra-ui/react";
 import { HiOutlineBriefcase } from "react-icons/hi";
-import { Sorter } from "../../utils/sorter";
+import { Sorter } from "../../lib/sorter";
 
 export default function Apps({ object, color }) {
 

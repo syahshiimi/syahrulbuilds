@@ -3,7 +3,7 @@ import { HiOutlineChip } from "react-icons/hi";
 
 
 // imort sorter function
-import { Sorter } from "../../utils/sorter";
+import { Sorter } from "../../lib/sorter";
 
 export default function Frameworks({ object, color }) {
 
