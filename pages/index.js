@@ -12,7 +12,9 @@ import WorkWithMe from "../components/sections/workwithme";
 import { loadContent } from '../lib/fetch-content';
 
 // Import content
-import { react as Sample } from "../content/homepage.md";
+import { attributes, react as HomeContent } from '../content/pages/index.md';
+
+console.log(attributes);
 
 export async function getStaticProps() {
 

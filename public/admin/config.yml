@@ -6,47 +6,19 @@ publish_mode: editorial_workflow
 media_folder: public/images
 
 collections:
-  - name: "/"
-    label: "Homepage"
-    folder: "pages/"
-    fields:
-      - {label: "Introduction", name: "Introduction", widget: "string"}
-      - {label: "Brief Motivation", name: "brief motivation", widget: "text"}
-      - {label: "My Tech Stack", name: "Tech Stack", widget: "text"}
-      - label: "My Tech Stack"
-        name: "tech stack list"
-        widget: "object" 
-        fields: 
-          - {label: "Languages", name: "Tech Stack (Languages)", widget: "list"}
-          - {label: "Frameworks", name: "Tech Stack (Frameworks)", widget: "list"}
-          - {label: "Apps", name: "Tech Stack (Apps)", widget: "list"}
-      - {label: "Past Works", name: "past works introduction", widget: "text"}
-      - label: "Past Works"
-        name: "past works one"
-        widget: "object"
-        fields: 
-          - {label: "Title", name: "project title", widget: "text"}
-          - {label: "Caption", name: "project caption", widget: "text"}
-          - {label: "Link", name: "project link", widget: "string"}
-          - label: "Tech Stack"
-            name: "project tech stack"
-            widget: "object"
-            fields: 
-              - {label: "Languages", name: "(Languages)", widget: "list"}
-              - {label: "Frameworks", name: "(Frameworks)", widget: "list"}
-              - {label: "Apps", name: "(Apps)", widget: "list"}
-      - label: "Past Works"
-        name: "past works two"
-        widget: "object"
-        fields: 
-          - {label: "Title", name: "second project title", widget: "text"}
-          - {label: "Caption", name: "second project caption", widget: "text"}
-          - {label: "Link", name: "second project link", widget: "string"}
-          - label: "Tech Stack"
-            name: "project tech stack two"
-            widget: "object"
-            fields: 
-              - {label: "Languages", name: "Second (Languages)", widget: "list"}
-              - {label: "Frameworks", name: "Second (Frameworks)", widget: "list"}
-              - {label: "Apps", name: "Second (Apps)", widget: "list"}
-
+  - name: "pages"
+    label: "Pages"
+    files:
+    - label: "Home"
+      name: "home"
+      file: "content/home.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Body", name: "body", widget: "markdown"}
+        - label: 'Cats'
+          name: "cats"
+          widget: list
+          fields:
+            - { label: "Name", name: "name", widget: "string"}
+            - { label: "Description", name: "description", widget: "text"}
