@@ -1,4 +1,4 @@
-import { Stack, Box, Container, Heading, Tag, Text, Wrap, Grid, SimpleGrid } from "@chakra-ui/react";
+import { Stack, Box, Container, Heading, Tag, Text, Wrap, Grid, SimpleGrid, useColorModeValue, LightMode } from "@chakra-ui/react";
 import ReactMarkdown from 'react-markdown';
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 
@@ -9,6 +9,9 @@ import Apps from "../../components/techstacks/apps";
 
 export default function Techstack({ content, tags }) {
 
+    const headingColor = useColorModeValue('purple.500', 'purple.100');
+    const textColor = useColorModeValue('gray.900', 'gray.50');
+    const skillsColor = useColorModeValue('gray.700', 'white');
     // create specific text theme
     const newTheme = {
         p: props => {
@@ -17,16 +20,14 @@ export default function Techstack({ content, tags }) {
                 <Text
                     className="c-techstack__content"
                     fontSize={['sm', 'md', 'md']}
-                    lineHeight="5"
+                    color={textColor}
                     mb={10}
-                    fontWeight='medium' >
+                    fontWeight='regular' >
                     {children}
                 </Text>
             );
         },
     };
-
-    // destructure tags
 
     return (
         <Box
@@ -35,7 +36,7 @@ export default function Techstack({ content, tags }) {
             <Heading
                 fontSize={["lg", 'lg', 'xl']}
                 lineHeight="6"
-                color="purple.100"
+                color={headingColor}
                 mb={[5, 4]}
                 textAlign={['left']}>
                 My Tech Stack
@@ -48,9 +49,11 @@ export default function Techstack({ content, tags }) {
             <SimpleGrid columns={[1, 1, 3]} className='c-homecontent__languages'
                 spacing={5}
             >
-                <Languages object={tags.programmingLang} />
-                <Frameworks object={tags.frameworks} />
-                <Apps object={tags.apps} />
+                <LightMode>
+                    <Languages object={tags.programmingLang} color={skillsColor} />
+                    <Frameworks object={tags.frameworks} color={skillsColor} />
+                    <Apps object={tags.apps} color={skillsColor} />
+                </LightMode>
             </SimpleGrid>
         </Box >
     )

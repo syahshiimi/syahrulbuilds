@@ -2,16 +2,16 @@ import { Box, Container, Tag, TagLabel, TagLeftIcon, Text, Wrap } from "@chakra-
 import { HiOutlineTerminal } from 'react-icons/hi';
 
 // import sorter function
-import { Sorter } from "../../utils/sorter";
+import { Sorter } from "../../lib/sorter";
 
 
-export default function Languages({ object }) {
+export default function Languages({ object, color }) {
 
     const SortArr = Sorter(object);
 
     return (
         <Box className='c-languages__container'>
-            <Text as={'strong'} fontSize='md' lineHeight={'6'} fontWeight='semibold'>Languages</Text>
+            <Text as={'strong'} fontSize='md' lineHeight={'6'} color={color} fontWeight='semibold'>Languages</Text>
             <Wrap className="c-languages_languages" mt={3}>
                 {SortArr.map((value, index) => {
                     return (

@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { useColorModeValue, Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 
 // Components
 import CurrentWorkCard from "../../components/currentworkscard";
@@ -7,12 +7,22 @@ import CurrentWorkCard from "../../components/currentworkscard";
 import { CurrentWorks } from "../../data/currentworks";
 
 export default function CurrentWorksContent() {
+    const headingColor = useColorModeValue('pink.500', 'pink.100');
+    const captionColor = useColorModeValue('gray.500', 'gray.50');
+
+    // color objects to be passed as hooks for currentwork cards
+    const currentworksColor = {
+        titleColor: useColorModeValue('gray.700', 'gray.100'),
+        techstackColor: useColorModeValue('gray.500', 'gray.300'),
+        contentColor: useColorModeValue('gray.600', 'gray.50')
+    }
+
     return (
         <Box className="c-homecontent__currentworks">
             <Box className="c-currentworks__textcontainer" mt={94}>
                 <Heading
                     fontSize={["lg", 'lg', 'xl']}
-                    color='pink.100'
+                    color={headingColor}
                     mb={[5, 4]}
                     textAlign={['left']}
                     className="c-currentworks__textheading">
@@ -20,7 +30,7 @@ export default function CurrentWorksContent() {
                 </Heading>
                 <Text className="c-currentworks__content"
                     fontSize={['sm', 'md']}
-                    color='gray.50'
+                    color={captionColor}
                     lineHeight={5}
                     fontWeight='medium'
                 >
@@ -33,6 +43,7 @@ export default function CurrentWorksContent() {
                     const { title, imgsrc, techstack, WorkInfo } = value
                     return (
                         <CurrentWorkCard
+                            color={currentworksColor}
                             key={key}
                             title={title}
                             imgsrc={imgsrc}

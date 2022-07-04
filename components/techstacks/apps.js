@@ -1,13 +1,13 @@
 import { Box, Container, Tag, TagLabel, TagLeftIcon, Text, Wrap } from "@chakra-ui/react";
 import { HiOutlineBriefcase } from "react-icons/hi";
-import { Sorter } from "../../utils/sorter";
+import { Sorter } from "../../lib/sorter";
 
-export default function Apps({ object }) {
+export default function Apps({ object, color }) {
 
     const SortArr = Sorter(object);
     return (
         <Box className="c-apps__container" >
-            <Text as={'strong'} fontSize='md' lineHeight={'6'} fontWeight='semibold'>Apps</Text>
+            <Text as={'strong'} fontSize='md' lineHeight={'6'} color={color} fontWeight='semibold'>Apps</Text>
             <Wrap className="c-languages_languages" mt={3}>
                 {SortArr.map((value, index) => {
                     return (
