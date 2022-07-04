@@ -11,7 +11,7 @@ export default function Hello({ content }) {
                 color={titleColor}
                 fontSize={['xl', null, '2xl']}
                 mb={[0, null, 4]}>
-                Hi! I`$apos`m Syahrul Anuar
+                Hi! I`m Syahrul Anuar
             </Heading>
             <Heading
                 className="c-homecontent__heading"
