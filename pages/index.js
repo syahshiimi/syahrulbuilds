@@ -11,10 +11,6 @@ import WorkWithMe from "../components/sections/workwithme";
 // Import lib
 import { loadContent } from '../lib/fetch-content';
 
-// Import content
-import { attributes, react as HomeContent } from '../content/pages/index.md';
-
-console.log(attributes);
 
 export async function getStaticProps() {
 

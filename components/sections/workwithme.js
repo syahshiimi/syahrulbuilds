@@ -1,7 +1,11 @@
-import { Box, Link, Flex, Heading, Text } from "@chakra-ui/react";
+import { useColorModeValue, Box, Link, Flex, Heading, Text } from "@chakra-ui/react";
 
 
 export default function WorkWithMe({ email, content }) {
+    const titleColor = useColorModeValue('teal.700', 'teal.100');
+    const bodyColor = useColorModeValue('gray.700', 'gray.50');
+    const contentColor = useColorModeValue('red.700', 'red.200');
+
     return (
         <Flex
             direction={'column'}
@@ -12,20 +16,20 @@ export default function WorkWithMe({ email, content }) {
             <Heading
                 className="c-workwithme__texttitle"
                 size={'md'}
-                color={'teal.100'}
+                color={titleColor}
                 mb={5}
             >
                 Work With Me
             </Heading>
             <Text
                 className="c-workwithme__content"
-                color={'gray.50'}
+                color={bodyColor}
                 fontSize={'sm'}
                 as='strong'
                 textAlign='center'>
                 {content}
             </Text>
-            <Text className="c-workwithme__email" fontSize={'lg'} color='gray.300' as={'strong'} mt='50px'>
+            <Text className="c-workwithme__email" fontSize={'lg'} color={contentColor} as={'strong'} mt='50px'>
                 <Link href="mailto:`${email}`">Drop me an email!</Link>
             </Text>
         </Flex>
