@@ -1,4 +1,4 @@
-import { Flex, Link, Heading, Button, Spacer, useColorMode, useColorModeValue, Icon } from "@chakra-ui/react";
+import { Flex, Link, Heading, Button, Spacer, useColorMode, useColorModeValue, Icon, Container } from "@chakra-ui/react";
 import Head from "next/head";
 import NextLink from 'next/link'; // aliased from link to NextLink
 
@@ -9,23 +9,25 @@ export default function Header() {
     const { colorMode, toggleColorMode } = useColorMode();
     const color = useColorModeValue('gray.700', 'gray.50')
     return (
-        <Flex
+        <Container
             className="c-topbar"
             pt={10}
-            px={4}
-            maxW={['container.sm', 'container.md', 'container.lg', 'container.xl']}
+            maxW={['container.sm', 'container.md']}
+            as={'nav'}
         >
-            <NextLink href="/" passHref>
-                <Link className="c-title" >
-                    <Heading color={color} size={['md', 'lg', 'lg']} >
-                        SA.
-                    </Heading>
-                </Link>
-            </NextLink>
-            <Spacer />
-            <Button onClick={toggleColorMode}>
-                {colorMode === 'dark' ? (<MoonIcon />) : (<SunIcon />)}
-            </Button>
-        </Flex>
+            <Flex grow={'1'}>
+                <NextLink href="/" passHref>
+                    <Link className="c-title" >
+                        <Heading color={color} size={['md', 'lg', 'lg']} >
+                            SA.
+                        </Heading>
+                    </Link>
+                </NextLink>
+                <Spacer />
+                <Button onClick={toggleColorMode}>
+                    {colorMode === 'dark' ? (<MoonIcon />) : (<SunIcon />)}
+                </Button>
+            </Flex>
+        </Container>
     );
 }
