@@ -6,6 +6,7 @@ export default function WorkWithMe({ email, content }) {
     const bodyColor = useColorModeValue('gray.700', 'gray.50');
     const contentColor = useColorModeValue('red.700', 'red.200');
 
+    console.log(email);
     return (
         <Flex
             direction={'column'}
@@ -30,8 +31,8 @@ export default function WorkWithMe({ email, content }) {
                 {content}
             </Text>
             <Text className="c-workwithme__email" fontSize={'lg'} color={contentColor} as={'strong'} mt='50px'>
-                <Link href="mailto:`${email}`">Drop me an email!</Link>
+                <Link href={"mailto:" + `${email}`}>Drop me an email!</Link>
             </Text>
-        </Flex>
+        </Flex >
     )
 }
