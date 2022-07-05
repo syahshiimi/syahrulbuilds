@@ -11,7 +11,7 @@ export default function Hello({ content }) {
                 color={titleColor}
                 fontSize={['xl', null, '2xl']}
                 mb={[0, null, 4]}>
-                Hi! I`m Syahrul Anuar
+                Hi! I'm Syahrul Anuar
             </Heading>
             <Heading
                 className="c-homecontent__heading"
@@ -19,7 +19,7 @@ export default function Hello({ content }) {
                 align="left"
                 color={bodyColor}
             >
-            I'm a{" "}
+                I'm a{" "}
                 <Text as="span" color="blue.500"
                     fontSize={["md", 'md', 'lg', 'xl']}
                 >
