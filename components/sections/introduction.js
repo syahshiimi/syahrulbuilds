@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   Text,
   VStack,
+  Link,
 } from "@chakra-ui/react";
 import { MDXProvider } from "@mdx-js/react";
 
