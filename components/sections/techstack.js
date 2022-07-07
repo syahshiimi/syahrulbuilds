@@ -13,11 +13,6 @@ import {
 } from "@chakra-ui/react";
 import { MDXProvider } from "@mdx-js/react";
 
-// Components
-import Languages from "../../components/techstacks/languages";
-import Frameworks from "../../components/techstacks/frameworks";
-import Apps from "../../components/techstacks/apps";
-
 // Content
 import Content from "../../pages/mdx/techstack.mdx";
 
@@ -50,7 +45,7 @@ export default function Techstack({ content, tags }) {
   };
 
   return (
-    <Box className="c-homecontent__techstack" mt={14} color={"gray.50"}>
+    <Box className="l-techstack" mt={14} color={"gray.50"}>
       <MDXProvider components={components}>
         {" "}
         <Content />

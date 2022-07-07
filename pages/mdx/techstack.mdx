@@ -2,9 +2,9 @@ import { Text, LightMode, SimpleGrid } from "@chakra-ui/react";
 
 {/* components */}
 
-import Languages from "../../components/techstacks/languages";
-import Frameworks from "../../components/techstacks/frameworks";
-import Apps from "../../components/techstacks/apps";
+import Languages from "../../components/techstacktag/languages";
+import Frameworks from "../../components/techstacktag/frameworks";
+import Apps from "../../components/techstacktag/apps";
 
 {/* import json files for list of skills */}
 import { FrameworksLang, ProgrammingLang, KnownApps } from "../../data/languages";
@@ -24,9 +24,7 @@ graphics and media related content.
   className="c-homecontent__languages"
   spacing={5}
 >
-  <LightMode>
-    <Languages object={ProgrammingLang} />
-    <Frameworks object={FrameworksLang} />
-    <Apps object={KnownApps} />
-  </LightMode>
+  <Languages object={ProgrammingLang} />
+  <Frameworks object={FrameworksLang} />
+  <Apps object={KnownApps} />
 </SimpleGrid>
