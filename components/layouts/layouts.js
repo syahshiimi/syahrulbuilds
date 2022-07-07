@@ -1,6 +1,6 @@
 import { Box, Container, Flex, useColorModeValue } from "@chakra-ui/react";
-import Footer from "./footer";
-import Header from "./header";
+import Footer from "../footer";
+import Header from "../header";
 
 export default function Layout({ children }) {
   const color = useColorModeValue("white", "gray.700");

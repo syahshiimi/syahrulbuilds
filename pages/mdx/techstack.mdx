@@ -1,3 +1,32 @@
+import { Text, LightMode, SimpleGrid } from "@chakra-ui/react";
+
+{/* components */}
+
+import Languages from "../../components/techstacks/languages";
+import Frameworks from "../../components/techstacks/frameworks";
+import Apps from "../../components/techstacks/apps";
+
+{/* import json files for list of skills */}
+import { FrameworksLang, ProgrammingLang, KnownApps } from "../../data/languages";
+
+{/* Tech stack introduction */}
+
 # My Tech Stack
 
-Apart from my tech stack, I have also acquired skills that were related to arts and design such as the **Adobe Creative Cloud** Suite and proficiency in graphics and media related content.
+Apart from my tech stack, I have also acquired skills that were related to
+arts and design such as the **Adobe Creative Cloud** Suite and proficiency in
+graphics and media related content.
+
+{/* Tech stack tagpill grid */}
+
+<SimpleGrid
+  columns={[1, 1, 3]}
+  className="c-homecontent__languages"
+  spacing={5}
+>
+  <LightMode>
+    <Languages object={ProgrammingLang} />
+    <Frameworks object={FrameworksLang} />
+    <Apps object={KnownApps} />
+  </LightMode>
+</SimpleGrid>
