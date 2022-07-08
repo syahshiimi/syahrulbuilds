@@ -14,7 +14,7 @@ import {
 import { MDXProvider } from "@mdx-js/react";
 
 // Content
-import Content from "../mdx/techstack.mdx";
+import Content from "./mdx/techstack.mdx";
 
 export default function Techstack({ content, tags }) {
   const headingColor = useColorModeValue("purple.500", "purple.100");
