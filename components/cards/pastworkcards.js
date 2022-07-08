@@ -57,12 +57,7 @@ export default function PastWorkCards({
           mt={[8, 7]}
           maxW={["100%", "100%", "330px"]}
         >
-          <Image
-            src={"/Users/syahrulanuar/syahrulbuilds/public/adm_card_image.png"}
-            alt="card image"
-            width={778}
-            height={477}
-          />
+          <Image src={imgsrc} alt="card image" width={778} height={477} />
           <Text
             fontSize="sm"
             as="strong"

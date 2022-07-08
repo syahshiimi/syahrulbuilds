@@ -32,7 +32,6 @@ export default function PastWorks({ content }) {
 
   const { title, year, description, languages, apps, frameworks, imgsrc } =
     Post.meta;
-  console.log(frameworks);
 
   const components = {
     h1: (props) => (
@@ -74,6 +73,7 @@ export default function PastWorks({ content }) {
           color={pastworksColor}
           title={title}
           languages={languages}
+          imgsrc={imgsrc}
           apps={apps}
           frameworks={frameworks}
           text={description}
