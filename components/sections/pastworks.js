@@ -12,13 +12,11 @@ import { MDXProvider } from "@mdx-js/react";
 // Components
 import PastWorkCards from "../cards/pastworkcards";
 
-// Import Data
-import { PastWorksContent } from "../../data/pastworks";
-
 // Import section content
 import Content from "../mdx/pastworks.mdx";
 
 // Import mdx meta
+// To-do: cretae a function that can fetch all .mdx files and return their meta tags
 import * as Post from "../../pages/ntu-adm.mdx";
 
 export default function PastWorks({ content }) {

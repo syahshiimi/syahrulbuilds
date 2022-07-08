@@ -16,9 +16,9 @@ import Image from "next/image";
 import NextLink from "next/link";
 
 // Import Tag Components
-import LanguagesTag from "../tags/languagestag";
-import FrameworksTag from "../tags/frameworkstag";
-import AppsTag from "../tags/appstag";
+import LanguagesTag from "./card-tags/languagestag";
+import FrameworksTag from "./card-tags/frameworkstag";
+import AppsTag from "./card-tags/appstag";
 
 // Import Button
 import ReadMore from "../readmorebutton";
@@ -73,7 +73,11 @@ export default function PastWorkCards({
           >
             Tech Stack
           </Text>
-          <Wrap className="c-pastworks__tagscontainer" justify={"right"} mt={3}>
+          <Wrap
+            className="c-pastworks__card-tagscontainer"
+            justify={"right"}
+            mt={3}
+          >
             <LightMode>
               <LanguagesTag array={languages} />
               <FrameworksTag array={frameworks} />
