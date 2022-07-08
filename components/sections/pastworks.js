@@ -7,11 +7,19 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
+import { MDXProvider } from "@mdx-js/react";
+
 // Components
-import PastWorkCards from "../../components/pastworkcards";
+import PastWorkCards from "../cards/pastworkcards";
 
 // Import Data
 import { PastWorksContent } from "../../data/pastworks";
+
+// Import section content
+import Content from "../mdx/pastworks.mdx";
+
+// Import mdx meta
+import * as Post from "../../pages/ntu-adm.mdx";
 
 export default function PastWorks({ content }) {
   const headingColor = useColorModeValue("orange.500", "orange.100");
@@ -24,7 +32,32 @@ export default function PastWorks({ content }) {
     contentColor: useColorModeValue("gray.600", "gray.50"),
   };
 
-  const components = {};
+  const { title, year, description, languages, apps, frameworks, imgsrc } =
+    Post.meta;
+  console.log(frameworks);
+
+  const components = {
+    h1: (props) => (
+      <Heading
+        fontSize={["lg", "lg", "xl"]}
+        color={headingColor}
+        mb={[5, 4]}
+        textAlign={["left"]}
+        className="c-pastworks__textheading"
+        {...props}
+      />
+    ),
+    p: (props) => (
+      <Text
+        className="c-pastworks__content"
+        fontSize={["sm", "md"]}
+        color={captionColor}
+        lineHeight={5}
+        fontWeight="medium"
+        {...props}
+      />
+    ),
+  };
 
   return (
     <Container
@@ -33,42 +66,20 @@ export default function PastWorks({ content }) {
       px={[0]}
     >
       <Box className="c-pastworks__textcontainer" mt={94}>
-        <Heading
-          fontSize={["lg", "lg", "xl"]}
-          color={headingColor}
-          mb={[5, 4]}
-          textAlign={["left"]}
-          className="c-pastworks__textheading"
-        >
-          What I&apos;ve Built
-        </Heading>
-        <Text
-          className="c-pastworks__content"
-          fontSize={["sm", "md"]}
-          color={captionColor}
-          lineHeight={5}
-          fontWeight="medium"
-        >
-          I&apos;ve spent time working with institutions working on grant
-          projects. I enjoy working on research projects especially in the
-          humanities as they are often impactful in nature.
-        </Text>
+        <MDXProvider components={components}>
+          {" "}
+          <Content />
+        </MDXProvider>
       </Box>
       <Flex className="c-pastworks_cardcontainer" direction={"column"}>
-        {Object.entries(PastWorksContent).map(([key, value]) => {
-          // Destructure returned objects
-          const { title, imgsrc, techstack, WorkInfo } = value;
-          return (
-            <PastWorkCards
-              color={pastworksColor}
-              key={key}
-              title={title}
-              imgsrc={imgsrc}
-              techstack={techstack}
-              text={WorkInfo}
-            />
-          );
-        })}
+        <PastWorkCards
+          color={pastworksColor}
+          title={title}
+          languages={languages}
+          apps={apps}
+          frameworks={frameworks}
+          text={description}
+        />
       </Flex>
     </Container>
   );

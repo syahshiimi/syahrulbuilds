@@ -25,7 +25,9 @@ import ReadMore from "../readmorebutton";
 
 export default function PastWorkCards({
   title,
-  techstack,
+  languages,
+  apps,
+  frameworks,
   text,
   imgsrc,
   color,
@@ -55,7 +57,12 @@ export default function PastWorkCards({
           mt={[8, 7]}
           maxW={["100%", "100%", "330px"]}
         >
-          <Image src={imgsrc} alt="card image" width={778} height={477} />
+          <Image
+            src={"/Users/syahrulanuar/syahrulbuilds/public/adm_card_image.png"}
+            alt="card image"
+            width={778}
+            height={477}
+          />
           <Text
             fontSize="sm"
             as="strong"
@@ -68,9 +75,9 @@ export default function PastWorkCards({
           </Text>
           <Wrap className="c-pastworks__tagscontainer" justify={"right"} mt={3}>
             <LightMode>
-              <LanguagesTag object={techstack} />
-              <FrameworksTag object={techstack} />
-              <AppsTag object={techstack} />
+              <LanguagesTag array={languages} />
+              <FrameworksTag array={frameworks} />
+              <AppsTag array={apps} />
             </LightMode>
           </Wrap>
         </Box>
