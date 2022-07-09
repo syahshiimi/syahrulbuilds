@@ -36,4 +36,15 @@ Therefore, much of work for the website focused around component selection, desi
 
 ## What I’ve Learned
 
-export default ({ children }) => <MDXBlog>{children}</MDXBlog>;
+export const meta = {
+  title: "NTU ",
+  description:
+    "NTU Arts, Design & Media was my first foray into building and designing a website. Although the website was built mostly through drag-n-drop components built by the tech team from E&Y, there were also many design considerations that had to be made due to the limitations in design.",
+  languages: ["CSS"],
+  apps: ["Sitefinity CMS"],
+  frameworks: [],
+  imgsrc: "/images/adm_card_image.png",
+  current: false,
+};
+
+export default ({ children }) => <MDXBlog meta={meta}>{children}</MDXBlog>;

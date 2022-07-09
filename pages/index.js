@@ -29,7 +29,6 @@ export function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <Flex direction={"column"} className="l-index" as="section" grow={"1"}>
       <Introduction />
