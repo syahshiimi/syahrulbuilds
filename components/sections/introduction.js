@@ -63,7 +63,6 @@ export default function Introduction({ content }) {
         mt={[0, null, 4]}
         mr={[0, null, 6]}
       />
-
       <Stack direction={"column"} spacing={[4]}>
         <MDXProvider components={components}>
           <Index />
