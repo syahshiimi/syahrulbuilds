@@ -1,16 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-    webpack: (cfg) => {
-        cfg.module.rules.push(
-            {
-                test: /\.md$/,
-                loader: 'frontmatter-markdown-loader',
-                options: { mode: ['react-component'] }
-            }
-        )
-        return cfg;
-    }
-}
-
-module.exports = nextConfig
+const withMDX = require('@next/mdx')({
+    extension: /\.mdx?$/,
+    options: {
+        providerImportSource: "@mdx-js/react",
+    },
+})
+module.exports = withMDX({
+    // Append the default value with md extensions
+    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+})
