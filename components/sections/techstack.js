@@ -19,7 +19,7 @@ import Content from "./mdx/techstack.mdx";
 export default function Techstack({ content, tags }) {
   const headingColor = useColorModeValue("purple.500", "purple.100");
   const textColor = useColorModeValue("gray.900", "gray.50");
-  const skillsColor = useColorModeValue("gray.700", "white");
+  const skillsColor = useColorModeValue("gray.700", "white"); // techstack title colors
 
   const components = {
     h1: (props) => (
