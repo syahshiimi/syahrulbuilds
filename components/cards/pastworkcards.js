@@ -13,7 +13,6 @@ import {
   LightMode,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import NextLink from "next/link";
 
 // Import Tag Components
 import LanguagesTag from "./card-tags/languagestag";

@@ -30,9 +30,6 @@ export default function PastWorks({ content }) {
     contentColor: useColorModeValue("gray.600", "gray.50"),
   };
 
-  const { title, year, description, languages, apps, frameworks, imgsrc } =
-    Post.meta;
-
   const components = {
     h1: (props) => (
       <Heading
@@ -73,18 +70,20 @@ export default function PastWorks({ content }) {
           const {
             data: { title, description, apps, imgsrc, frameworks, languages },
           } = obj;
-          console.log(title);
-          return <div></div>;
+          console.log(imgsrc);
+          return (
+            <PastWorkCards
+              key={index}
+              color={pastworksColor}
+              title={title}
+              languages={languages}
+              imgsrc={imgsrc}
+              apps={apps}
+              frameworks={frameworks}
+              text={description}
+            />
+          );
         })}
-        {/*}        <PastWorkCards
-          color={pastworksColor}
-          title={title}
-          languages={languages}
-          imgsrc={imgsrc}
-          apps={apps}
-          frameworks={frameworks}
-          text={description}
-        />*/}
       </Flex>
     </Container>
   );
