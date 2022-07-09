@@ -7,12 +7,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-export default function WorkWithMe({ email, content }) {
+export default function WorkWithMe() {
   const titleColor = useColorModeValue("teal.700", "teal.100");
   const bodyColor = useColorModeValue("gray.700", "gray.50");
   const contentColor = useColorModeValue("red.700", "red.200");
 
-  console.log(email);
+  const email = "syahrlanuar95@gmail.com";
   return (
     <Flex
       direction={"column"}
@@ -36,7 +36,8 @@ export default function WorkWithMe({ email, content }) {
         as="strong"
         textAlign="center"
       >
-        {content}
+        I am also open to working on art collaborations that may include
+        anything related web technologies, digital experiences and interfaces.
       </Text>
       <Text
         className="c-workwithme__email"

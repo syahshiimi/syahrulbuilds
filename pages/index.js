@@ -8,6 +8,7 @@ import Introduction from "../components/sections/introduction";
 import PastWorks from "../components/sections/pastworks";
 import Techstack from "../components/sections/techstack";
 import CurrentWorksContent from "../components/sections/currentworks";
+import WorkWithMe from "../components/sections/workwithme";
 
 import { postFilePaths, POSTS_PATH } from "../lib/mdx";
 
@@ -33,6 +34,8 @@ export default function Home({ posts }) {
       <Introduction />
       <Techstack />
       <PastWorks content={posts} />
+      <CurrentWorksContent content={posts} />
+      <WorkWithMe />
     </Flex>
   );
 }

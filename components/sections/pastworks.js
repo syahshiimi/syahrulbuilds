@@ -58,15 +58,23 @@ export default function PastWorks({ content }) {
       <Box className="c-pastworks__textcontainer" mt={94}>
         <MDXProvider components={components}>
           {" "}
-          <Content />
+          <Content props={content} />
         </MDXProvider>
       </Box>
       <Flex className="c-pastworks_cardcontainer" direction={"column"}>
         {content.map((obj, index) => {
           const {
-            data: { title, description, apps, imgsrc, frameworks, languages },
+            data: {
+              title,
+              description,
+              apps,
+              imgsrc,
+              frameworks,
+              languages,
+              current,
+            },
           } = obj;
-          return (
+          return !current ? (
             <PastWorkCards
               key={index}
               color={pastworksColor}
@@ -77,7 +85,7 @@ export default function PastWorks({ content }) {
               frameworks={frameworks}
               text={description}
             />
-          );
+          ) : null;
         })}
       </Flex>
     </Container>
