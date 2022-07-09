@@ -8,6 +8,8 @@ imgsrc: "/images/adm_card_image.png"
 current: false
 ---
 
+import MDXBlog from "/components/mdxlayout";
+
 # NTU, School of Art, Design and Media
 
 !(adm_card_image.png)
@@ -33,3 +35,5 @@ Therefore, much of work for the website focused around component selection, desi
 ## Problems & Challenges Faced
 
 ## What I’ve Learned
+
+export default ({ children }) => <MDXBlog>{children}</MDXBlog>;
