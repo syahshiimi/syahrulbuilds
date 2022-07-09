@@ -12,7 +12,7 @@ import { MDXProvider } from "@mdx-js/react";
 // Components
 import PastWorkCards from "../cards/pastworkcards";
 
-// Import section content
+// Content
 import Content from "./mdx/pastworks.mdx";
 
 export default function PastWorks({ content }) {

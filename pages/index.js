@@ -3,9 +3,12 @@ import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+
 import Introduction from "../components/sections/introduction";
 import PastWorks from "../components/sections/pastworks";
 import Techstack from "../components/sections/techstack";
+import CurrentWorksContent from "../components/sections/currentworks";
+
 import { postFilePaths, POSTS_PATH } from "../lib/mdx";
 
 // data fetch from pages folder all mdx posts

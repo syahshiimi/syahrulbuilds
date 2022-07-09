@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { MDXProvider } from "@mdx-js/react";
 
-import Index from "./mdx/index.mdx";
+import Index from "./mdx/introduction.mdx";
 
 export default function Introduction({ content }) {
   const titleColor = useColorModeValue("gray.700", "gray.200");

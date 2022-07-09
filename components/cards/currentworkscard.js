@@ -12,12 +12,12 @@ import {
 import Image from "next/image";
 
 // Import Tag Components
-import LanguagesTag from "./tags/languagestag";
-import FrameworksTag from "./tags/frameworkstag";
-import AppsTag from "./tags/appstag";
+import LanguagesTag from "./card-tags/languagestag";
+import FrameworksTag from "./card-tags/frameworkstag";
+import AppsTag from "./card-tags/appstag";
 
 // Import Button
-import ReadMore from "./readmorebutton";
+import ReadMore from "/components/readmorebutton";
 
 export default function CurrentWorkCards({
   color,
