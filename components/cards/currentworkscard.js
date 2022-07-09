@@ -20,11 +20,13 @@ import AppsTag from "./card-tags/appstag";
 import ReadMore from "/components/readmorebutton";
 
 export default function CurrentWorkCards({
-  color,
   title,
-  techstack,
+  languages,
+  apps,
+  frameworks,
   text,
   imgsrc,
+  color,
 }) {
   return (
     <Grid className="c-currentworks" mt={10}>
@@ -42,7 +44,7 @@ export default function CurrentWorkCards({
       <Flex
         direction={["column", "column", "row"]}
         columnGap={12}
-        className="c-pastworks__contentcontainer"
+        className="c-currentworks__contentcontainer"
       >
         <Box
           display={"flex"}
@@ -68,9 +70,9 @@ export default function CurrentWorkCards({
             mt={3}
           >
             <LightMode>
-              <LanguagesTag object={techstack} />
-              <FrameworksTag object={techstack} />
-              <AppsTag object={techstack} />
+              <LanguagesTag array={languages} />
+              <FrameworksTag array={frameworks} />
+              <AppsTag array={apps} />
             </LightMode>
           </Wrap>
         </Box>
