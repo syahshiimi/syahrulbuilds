@@ -66,7 +66,6 @@ export default function PastWorks({ content }) {
           const {
             data: { title, description, apps, imgsrc, frameworks, languages },
           } = obj;
-          console.log(imgsrc);
           return (
             <PastWorkCards
               key={index}

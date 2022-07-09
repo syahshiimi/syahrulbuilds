@@ -5,11 +5,6 @@ import {
   Grid,
   Text,
   Flex,
-  Tag,
-  TagLabel,
-  Button,
-  GridItem,
-  Spacer,
   LightMode,
 } from "@chakra-ui/react";
 import Image from "next/image";
