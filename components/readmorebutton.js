@@ -1,6 +1,13 @@
 import { Button } from "@chakra-ui/react";
+import Link from "next/link";
 
-const ReadMore = () => {
+const ReadMore = ({ link }) => {
+  // cleanup link to remove .dx suffixull;
+  let paths, newPaths;
+  if (link) {
+    paths = link.split(".");
+    newPaths = paths[0];
+  }
   return (
     <Button
       className="c-readmore__button"
@@ -8,7 +15,7 @@ const ReadMore = () => {
       size={"sm"}
       alignItems="right"
     >
-      Read More
+      <Link href={`${newPaths}`}>Read More</Link>
     </Button>
   );
 };

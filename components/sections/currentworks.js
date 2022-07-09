@@ -46,6 +46,7 @@ export default function CurrentWorksContent({ content }) {
       <Flex className="c-currentworks_cardcontainer" direction={"column"}>
         {content.map((obj, index) => {
           const {
+            filePath,
             data: {
               title,
               description,
@@ -66,6 +67,7 @@ export default function CurrentWorksContent({ content }) {
               apps={apps}
               frameworks={frameworks}
               text={description}
+              path={filePath}
             />
           ) : null;
         })}

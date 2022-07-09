@@ -25,6 +25,7 @@ export default function PastWorkCards({
   text,
   imgsrc,
   color,
+  path,
 }) {
   return (
     <Grid className="c-pastworks" mt={10}>
@@ -91,7 +92,7 @@ export default function PastWorkCards({
           >
             {text}
           </Text>
-          <ReadMore />
+          <ReadMore link={path} />
         </Container>
       </Flex>
     </Grid>

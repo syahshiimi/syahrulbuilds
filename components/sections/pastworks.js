@@ -64,6 +64,7 @@ export default function PastWorks({ content }) {
       <Flex className="c-pastworks_cardcontainer" direction={"column"}>
         {content.map((obj, index) => {
           const {
+            filePath,
             data: {
               title,
               description,
@@ -84,6 +85,7 @@ export default function PastWorks({ content }) {
               apps={apps}
               frameworks={frameworks}
               text={description}
+              path={filePath}
             />
           ) : null;
         })}

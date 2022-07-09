@@ -27,6 +27,7 @@ export default function CurrentWorkCards({
   text,
   imgsrc,
   color,
+  path,
 }) {
   return (
     <Grid className="c-currentworks" mt={10}>
@@ -84,7 +85,7 @@ export default function CurrentWorkCards({
           <Text fontSize="sm" color={color.contentColor} align={"right"} mb={2}>
             {text}
           </Text>
-          <ReadMore />
+          <ReadMore link={path} />
         </Container>
       </Flex>
     </Grid>
