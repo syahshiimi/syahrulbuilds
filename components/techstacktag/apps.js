@@ -13,8 +13,6 @@ import { HiOutlineBriefcase } from "react-icons/hi";
 import { Sorter } from "../../lib/sorter";
 
 export default function Apps({ object, color }) {
-  const skillsColor = useColorModeValue("gray.700", "white");
-
   const SortArr = Sorter(object);
   return (
     <Box className="c-apps__container">
@@ -22,7 +20,7 @@ export default function Apps({ object, color }) {
         as={"strong"}
         fontSize="md"
         lineHeight={"6"}
-        color={skillsColor}
+        color={color}
         fontWeight="semibold"
       >
         Apps

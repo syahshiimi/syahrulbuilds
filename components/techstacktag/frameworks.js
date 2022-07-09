@@ -15,8 +15,6 @@ import { HiOutlineChip } from "react-icons/hi";
 import { Sorter } from "../../lib/sorter";
 
 export default function Frameworks({ object, color }) {
-  const skillsColor = useColorModeValue("gray.700", "white");
-
   const SortArr = Sorter(object);
   return (
     <Box frameworks="c-frameworks__container">
@@ -24,7 +22,7 @@ export default function Frameworks({ object, color }) {
         as={"strong"}
         fontSize="md"
         lineHeight={"6"}
-        color={skillsColor}
+        color={color}
         fontWeight="semibold"
       >
         Frameworks

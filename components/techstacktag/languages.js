@@ -14,8 +14,7 @@ import { HiOutlineTerminal } from "react-icons/hi";
 // import sorter function
 import { Sorter } from "../../lib/sorter";
 
-export default function Languages({ object }) {
-  const skillsColor = useColorModeValue("gray.700", "white");
+export default function Languages({ object, color }) {
   const SortArr = Sorter(object);
 
   return (
@@ -24,7 +23,7 @@ export default function Languages({ object }) {
         as={"strong"}
         fontSize="md"
         lineHeight={"6"}
-        color={skillsColor}
+        color={color}
         fontWeight="semibold"
       >
         Languages

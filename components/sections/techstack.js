@@ -45,10 +45,10 @@ export default function Techstack({ content, tags }) {
   };
 
   return (
-    <Box className="l-techstack" mt={14} color={"gray.50"}>
+    <Box className="l-techstack" mt={14}>
       <MDXProvider components={components}>
         {" "}
-        <Content />
+        <Content color={skillsColor} />
       </MDXProvider>
     </Box>
   );
